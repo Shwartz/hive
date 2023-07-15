@@ -1,0 +1,40 @@
+{
+  "cards": [
+    {
+      "imageUrl": "$lib/images/card-demo.jpg",
+      "title": "1 portfolio title",
+      "description": "description text",
+      "link": {
+        "text": "link name",
+        "url": "url to the page"
+      }
+    },
+    {
+      "imageUrl": "url1",
+      "title": "2 portfolio title",
+      "description": "description text",
+      "link": {
+        "text": "link name",
+        "url": "url to the page"
+      }
+    },
+    {
+      "imageUrl": "url1",
+      "title": "3 portfolio title",
+      "description": "description text",
+      "link": {
+        "text": "link name",
+        "url": "url to the page"
+      }
+    },
+    {
+      "imageUrl": "url1",
+      "title": "4 portfolio title",
+      "description": "description text",
+      "link": {
+        "text": "link name",
+        "url": "url to the page"
+      }
+    }
+  ]
+}

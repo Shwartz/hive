@@ -2,6 +2,8 @@
   import {fly} from 'svelte/transition';
   import {backOut} from 'svelte/easing';
   import {onMount, tick} from 'svelte';
+  import dataCards from '$lib/data/cards.json';
+  import img from '$lib/images/card-demo.jpg';
 
   const words = [
     'London',
@@ -24,9 +26,11 @@
 
 <div class="hero">
     <div class="circle">
-        <h1>Avanade X</h1>
-        <p>We partnered with EDF Hinkley Point C to build a customized Azure platform, empowering them to transform
-            their business while protecting the security of their data and applications.</p>
+        <div class="content">
+            <h1>Avanade X</h1>
+            <p>We partnered with EDF Hinkley Point C to build a customized Azure platform, empowering them to transform
+                their business while protecting the security of their data and applications.</p>
+        </div>
     </div>
 </div>
 
@@ -55,6 +59,15 @@
 
 <section class="medium center">
     <h3>Our work</h3>
+    <div class="cards">
+        {#each dataCards.cards as {imageUrl, title, description, link}}
+            <div class="card">
+                <img src={img} alt={title}>
+                <p>image url {description}</p>
+                <p>image url {link.text}</p>
+            </div>
+        {/each}
+    </div>
 
 </section>
 <h3>Testimonials</h3>
@@ -81,8 +94,13 @@
     border: 1px solid rgba(255, 255, 255, 0.5);
     box-shadow: 0 0 20px white;
     border-radius: 50%;
-    background: rgba(0, 0, 0, 0.2);
+    background: linear-gradient(90deg, rgba(0,0,0,0.6) 0%, rgba(85,85,85,0.2) 100%);
     color: white;
+    animation: rotation 10s infinite linear;
+
+    .content {
+      animation: rotation 10s infinite linear reverse;
+    }
 
     h1 {
       font-size: 2em;
@@ -102,6 +120,16 @@
 
     span {
       display: inline-block;
+    }
+  }
+
+  .cards {
+    display: flex;
+    gap: 1rem;
+
+    .card {
+      border: 1px solid #f2f2f2;
+      padding: 0.5rem;
     }
   }
 </style>
