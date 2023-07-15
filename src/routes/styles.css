@@ -93,3 +93,36 @@ meter {
 :where([draggable="true"]) {
     -webkit-user-drag: element;
 }
+/**
+SITE UTILS
+*/
+
+:root {
+    --font-body: Helvetica Neue, Helvetica,Arial,sans-serif, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+    Cantarell, 'Open Sans', sans-serif;
+    font-family: var(--font-body);
+}
+
+body {
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 2rem;
+    line-height: 3rem;
+}
+
+h3 {
+    font-size: 1.6rem;
+    line-height: 3rem;
+}
+
+section.medium {
+    max-width: 800px;
+    margin: auto;
+    padding: 1rem;
+}
+
+.center {
+    text-align: center;
+}
