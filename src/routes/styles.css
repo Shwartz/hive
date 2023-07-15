@@ -117,6 +117,10 @@ h3 {
     line-height: 3rem;
 }
 
+strong {
+    font-weight: bolder;
+}
+
 section.medium {
     max-width: 800px;
     margin: auto;

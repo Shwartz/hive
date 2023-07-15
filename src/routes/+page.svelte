@@ -1,4 +1,20 @@
 <script>
+  import {fly} from 'svelte/transition';
+  import {backOut} from 'svelte/easing';
+  import {onMount, tick} from 'svelte';
+
+  const words = [
+    'London',
+    'Digital',
+    'Studio',
+    '🪄'
+  ];
+
+  let animate = false
+
+  onMount(() => {
+    animate = true;
+  })
 </script>
 
 <svelte:head>
@@ -15,7 +31,25 @@
 </div>
 
 <section class="medium center">
-    <h1>London Digital Studio</h1>
+    <h1 in:fly={{delay: 200, y:100}} class="lines">&nbsp;
+        {#if animate}
+            {#each words as word, i}
+                {#await tick()}
+                {:then}
+                <span
+                        in:fly={{
+                          delay: 300 * i,
+                          duration: 300,
+                          easing: backOut,
+                          y: 100,
+                  }}
+                >
+                    {word}
+                </span>
+                {/await}
+            {/each}
+        {/if}
+    </h1>
     <p>Short description</p>
 </section>
 
@@ -57,6 +91,17 @@
 
     p {
       font-size: 1.2em;
+    }
+  }
+
+  .lines {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+
+    span {
+      display: inline-block;
     }
   }
 </style>
