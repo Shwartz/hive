@@ -75,7 +75,7 @@
     <p>Short description</p>
 </section>
 
-<section class="medium">
+<section class="large">
     <h3 class="center">Our work</h3>
     <div class="cards">
         {#each dataCards.cards as {imageUrl, title, description, link}}
@@ -142,12 +142,27 @@
   }
 
   .cards {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(1,minmax(0,1fr));
     gap: 1rem;
+    background: yellow;
 
     .card {
-      border: 1px solid #f2f2f2;
+      border: 1px solid red;
       padding: 0.5rem;
+      background: rgba(114, 30, 30, 0.2)
+    }
+
+    @media (min-width: 480px) {
+      grid-template-columns: repeat(2,minmax(0,1fr));
+    }
+
+    @media (min-width: 800px) {
+      grid-template-columns: repeat(3,minmax(0,1fr));
+    }
+
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(4,minmax(0,1fr));
     }
   }
 </style>

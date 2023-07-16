@@ -125,10 +125,17 @@ strong {
     font-weight: bolder;
 }
 
-section.medium {
-    max-width: 800px;
+section {
     margin: auto;
     padding: 1rem;
+}
+
+section.medium {
+    max-width: 800px;
+}
+
+section.large {
+    max-width: 1200px;
 }
 
 .center {
