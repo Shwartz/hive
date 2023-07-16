@@ -6,6 +6,8 @@
 
   let animate = false
 
+  const words = ['London', 'Digital', 'Studio', '🪄'];
+
   onMount(() => {
     animate = true;
   });
@@ -29,46 +31,18 @@
 <section class="medium center">
     <h1 class="lines">&nbsp;
         {#if animate}
-        <span
-                in:fly={{
-              delay: 300,
-              duration: 300,
-              easing: backOut,
-              y: 100,
-          }}
-        >
-            London
-        </span>
+            {#each words as word, i}
             <span
-                    in:fly={{
-              delay: 600,
-              duration: 300,
-              easing: backOut,
-              y: 100,
-          }}
+                    in:fly|global={{
+                    delay: 500 * (i + 1),
+                    duration: 300,
+                    easing: backOut,
+                    y: (i === 3) ? -100: 100,
+                }}
             >
-            Digital
-        </span>
-            <span
-                    in:fly={{
-              delay: 900,
-              duration: 300,
-              easing: backOut,
-              y: 100,
-          }}
-            >
-            Studio
-        </span>
-            <span
-                    in:fly={{
-              delay: 1500,
-              duration: 300,
-              easing: backOut,
-              y: 100,
-          }}
-            >
-            🪄
-        </span>
+                {word}
+            </span>
+            {/each}
         {/if}
     </h1>
 
