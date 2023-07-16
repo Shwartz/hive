@@ -121,6 +121,10 @@ p {
     line-height: 1.6rem;
 }
 
+img {
+    width: 100%;
+}
+
 strong {
     font-weight: bolder;
 }

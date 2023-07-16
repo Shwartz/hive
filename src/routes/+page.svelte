@@ -73,6 +73,7 @@
     </h1>
 
     <p>Short description</p>
+    <p>By the way, if we could get 12 portfolio cases it would look awesome on a screen. The reason is that it would nicely divide by every screen size.</p>
 </section>
 
 <section class="large">
@@ -80,9 +81,13 @@
     <div class="cards">
         {#each dataCards.cards as {imageUrl, title, description, link}}
             <div class="card">
-                <img src="{imageUrl}" alt={title}>
-                <p>image url {description}</p>
-                <p>image url {link.text}</p>
+                <div class="head">
+                    <img src="{imageUrl}" alt={title}>
+                </div>
+                <div class="content">
+                    <p>image url {description}</p>
+                    <p>image url {link.text}</p>
+                </div>
             </div>
         {/each}
     </div>
@@ -145,12 +150,25 @@
     display: grid;
     grid-template-columns: repeat(1,minmax(0,1fr));
     gap: 1rem;
-    background: yellow;
 
     .card {
-      border: 1px solid red;
-      padding: 0.5rem;
-      background: rgba(114, 30, 30, 0.2)
+      border: 1px solid #f1bd8e;
+      border-radius: 5px;
+      overflow: hidden;
+
+      .head {
+        aspect-ratio: 16/9;
+
+        img {
+          display: block;
+          object-fit: cover;
+          height: 100%;
+        }
+      }
+
+      .content {
+        padding: 0.5rem;
+      }
     }
 
     @media (min-width: 480px) {
