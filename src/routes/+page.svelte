@@ -77,21 +77,14 @@
 
 <section class="medium">
     <h3 class="center">Our work</h3>
-    <!--<div class="cards">
+    <div class="cards">
         {#each dataCards.cards as {imageUrl, title, description, link}}
             <div class="card">
-                <img src={imageUrl} alt={title}>
+                <img src="{imageUrl}" alt={title}>
                 <p>image url {description}</p>
                 <p>image url {link.text}</p>
             </div>
         {/each}
-    </div>-->
-    <div class="cards">
-        <div class="card">
-            <img src="$lib/images/card-demo.jpg" alt="title">
-            <p>image url description</p>
-            <p>image url link.text</p>
-        </div>
     </div>
 
 </section>
