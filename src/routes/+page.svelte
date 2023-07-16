@@ -2,11 +2,10 @@
   import {fly} from 'svelte/transition';
   import {backOut} from 'svelte/easing';
   import {onMount} from 'svelte';
-  import dataCards from '$lib/data/cards.json';
 
   let animate = false
-
   const words = ['London', 'Digital', 'Studio', '🪄'];
+  export let data;
 
   onMount(() => {
     animate = true;
@@ -51,22 +50,22 @@
 </section>
 
 <section class="large">
-    <h3 class="center">Our work</h3>
+    <h3 class="center">Our work 2</h3>
     <div class="cards">
-        {#each dataCards.cards as {imageUrl, title, description, link}}
+        {#each data.posts as post}
             <div class="card">
                 <div class="head">
-                    <img src="{imageUrl}" alt={title}>
+                    <img src="images/{post.image}" alt={post.title}>
                 </div>
                 <div class="content">
-                    <p>image url {description}</p>
-                    <p>image url {link.text}</p>
+                <h3><a href={post.slug} class="title">{post.title}</a></h3>
+                <p class="description">{post.description}</p>
                 </div>
             </div>
         {/each}
     </div>
-
 </section>
+
 <h3>Testimonials</h3>
 <p>Snippets of testimonials, probably some slide</p>
 
@@ -143,6 +142,10 @@
       .content {
         padding: 0.5rem;
       }
+    }
+
+    a {
+      display: block;
     }
 
     @media (min-width: 480px) {

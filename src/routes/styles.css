@@ -114,7 +114,8 @@ h1 {
 
 h3 {
     font-size: 1.6rem;
-    line-height: 3rem;
+    line-height: 2rem;
+    margin-bottom: 1rem;
 }
 
 p {
@@ -144,6 +145,15 @@ section.large {
 
 .center {
     text-align: center;
+}
+
+a {
+    color: #ff5800;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #9e3800;
 }
 
 /**
