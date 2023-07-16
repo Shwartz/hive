@@ -1,22 +1,14 @@
 <script>
   import {fly} from 'svelte/transition';
   import {backOut} from 'svelte/easing';
-  import {onMount, tick} from 'svelte';
+  import {onMount} from 'svelte';
   import dataCards from '$lib/data/cards.json';
-  import img from '$lib/images/card-demo.jpg';
-
-  const words = [
-    'London',
-    'Digital',
-    'Studio',
-    '🪄'
-  ];
 
   let animate = false
 
   onMount(() => {
     animate = true;
-  })
+  });
 </script>
 
 <svelte:head>
@@ -35,38 +27,71 @@
 </div>
 
 <section class="medium center">
-    <h1 in:fly={{delay: 200, y:100}} class="lines">&nbsp;
+    <h1 class="lines">&nbsp;
         {#if animate}
-            {#each words as word, i}
-                {#await tick()}
-                {:then}
-                <span
-                        in:fly={{
-                          delay: 300 * i,
-                          duration: 300,
-                          easing: backOut,
-                          y: 100,
-                  }}
-                >
-                    {word}
-                </span>
-                {/await}
-            {/each}
+        <span
+                in:fly={{
+              delay: 300,
+              duration: 300,
+              easing: backOut,
+              y: 100,
+          }}
+        >
+            London
+        </span>
+            <span
+                    in:fly={{
+              delay: 600,
+              duration: 300,
+              easing: backOut,
+              y: 100,
+          }}
+            >
+            Digital
+        </span>
+            <span
+                    in:fly={{
+              delay: 900,
+              duration: 300,
+              easing: backOut,
+              y: 100,
+          }}
+            >
+            Studio
+        </span>
+            <span
+                    in:fly={{
+              delay: 1500,
+              duration: 300,
+              easing: backOut,
+              y: 100,
+          }}
+            >
+            🪄
+        </span>
         {/if}
     </h1>
+
     <p>Short description</p>
 </section>
 
-<section class="medium center">
-    <h3>Our work</h3>
-    <div class="cards">
+<section class="medium">
+    <h3 class="center">Our work</h3>
+    <!--<div class="cards">
         {#each dataCards.cards as {imageUrl, title, description, link}}
             <div class="card">
-                <img src={img} alt={title}>
+                <img src={imageUrl} alt={title}>
                 <p>image url {description}</p>
                 <p>image url {link.text}</p>
             </div>
         {/each}
+    </div>-->
+    <div class="cards">
+        <div class="card">
+            <img src="$lib/images/card-demo.jpg" alt="title">
+            <p>image url description</p>
+            <p>image url link.text</p>
+        </div>
     </div>
 
 </section>
@@ -94,7 +119,7 @@
     border: 1px solid rgba(255, 255, 255, 0.5);
     box-shadow: 0 0 20px white;
     border-radius: 50%;
-    background: linear-gradient(90deg, rgba(0,0,0,0.6) 0%, rgba(85,85,85,0.2) 100%);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.6) 0%, rgba(85, 85, 85, 0.2) 100%);
     color: white;
     animation: rotation 10s infinite linear;
 

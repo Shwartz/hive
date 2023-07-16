@@ -1,7 +1,7 @@
 {
   "cards": [
     {
-      "imageUrl": "$lib/images/card-demo.jpg",
+      "imageUrl": "/src/lib/images/card-demo.jpg",
       "title": "1 portfolio title",
       "description": "description text",
       "link": {
@@ -10,7 +10,7 @@
       }
     },
     {
-      "imageUrl": "url1",
+      "imageUrl": "/src/lib/images/card-demo.jpg",
       "title": "2 portfolio title",
       "description": "description text",
       "link": {
@@ -19,7 +19,7 @@
       }
     },
     {
-      "imageUrl": "url1",
+      "imageUrl": "/src/lib/images/card-demo.jpg",
       "title": "3 portfolio title",
       "description": "description text",
       "link": {
@@ -28,7 +28,7 @@
       }
     },
     {
-      "imageUrl": "url1",
+      "imageUrl": "/src/lib/images/card-demo.jpg",
       "title": "4 portfolio title",
       "description": "description text",
       "link": {
