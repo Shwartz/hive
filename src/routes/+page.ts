@@ -1,3 +1,4 @@
+export const prerender = true;
 import type { Post } from '$lib/types';
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment

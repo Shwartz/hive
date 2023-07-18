@@ -1,3 +1,4 @@
+export const prerender = true;
 import { error } from '@sveltejs/kit'
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
