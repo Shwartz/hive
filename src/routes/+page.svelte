@@ -2,6 +2,7 @@
   import {fly} from 'svelte/transition';
   import {backOut} from 'svelte/easing';
   import {onMount} from 'svelte';
+  import {base} from "$app/paths";
 
   let animate = false
   const words = ['London', 'Digital', 'Studio', '🪄'];
@@ -55,10 +56,10 @@
         {#each data.posts as post}
             <div class="card">
                 <div class="head">
-                    <img src="images/{post.image}" alt={post.title}>
+                    <img src="{base}/images/{post.image}" alt={post.title}>
                 </div>
                 <div class="content">
-                <h3><a href={post.slug} class="title">{post.title}</a></h3>
+                <h3><a href={base}/{post.slug} class="title">{post.title}</a></h3>
                 <p class="description">{post.description}</p>
                 </div>
             </div>
