@@ -33,6 +33,7 @@
     {#if animate}
       {#each words as word, i}
             <span
+              class={`word-${i}`}
               in:fly|global={{
                     delay: 500 * (i + 1),
                     duration: 300,
@@ -124,12 +125,33 @@
 
   .lines {
     display: flex;
-    gap: 0.5rem;
+    gap: 1rem;
     justify-content: center;
-    margin-bottom: 2rem;
+    margin: 2rem 0 3rem;
+    line-height: 4rem;
+    font-size: 3.5rem;
+    font-family: 'Rubik Variable', sans-serif;
+    font-weight: 600;
 
     span {
       display: inline-block;
+
+
+      &.word-1 {
+        background: linear-gradient(90deg, rgb(255, 100, 0) 0%, rgba(9,9,121,0.5) 35%, rgba(143,46,0,1) 100%);
+        background-size: cover;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      &.word-0, &.word-2 {
+        background: linear-gradient(90deg, rgba(143,46,0,1) 0%, rgba(9,9,121,0.5) 35%, rgba(255,100,0,1) 100%);
+        background-size: cover;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
     }
   }
 
