@@ -1,16 +1,24 @@
 <script>
-  import './../styles.css';
+  import "./../styles.css";
   import { base } from "$app/paths";
 </script>
 
 <div class="app">
+  <section>
     <header>
-        Back to <a href="{base}/">Home</a>
+      Back to <a href="{base}/">Home</a>
     </header>
-    <main>
-        <slot />
-    </main>
+  </section>
+  <main>
+    <section>
+      <slot />
+    </section>
+  </main>
 </div>
 
 <style>
+    .app {
+        max-width: 800px;
+        margin: auto;
+    }
 </style>
