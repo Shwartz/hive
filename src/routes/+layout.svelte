@@ -1,6 +1,4 @@
 <script>
-  // Supports weights 300-900
-  import "@fontsource-variable/rubik";
   import "./styles.css";
   import { fly } from "svelte/transition";
 

@@ -19,12 +19,11 @@
 </svelte:head>
 
 <div class="hero">
-  <div class="circle">
-    <div class="content">
-      <h1>Avanade X</h1>
-      <p>We partnered with EDF Hinkley Point C to build a customized Azure platform, empowering them to transform
-        their business while protecting the security of their data and applications.</p>
-    </div>
+  <div class="content">
+    <h1>
+      <span>We Are</span>
+      <span>Avanade X</span>
+    </h1>
   </div>
 </div>
 
@@ -75,53 +74,31 @@
 <style lang="scss">
   .hero {
     display: flex;
-    height: 500px;
+    height: 780px;
     justify-content: center;
     align-items: center;
-    background: url('$lib/images/bg-hero.jpg') center no-repeat;
+    background: url('$lib/images/hero_bg-2.jpg') center no-repeat;
     background-size: cover;
   }
 
-  .circle {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 450px;
-    height: 450px;
-    padding: 24px;
-    text-align: center;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    box-shadow: 0 0 20px white;
-    border-radius: 50%;
-    color: white;
 
-    &:before {
-      content: "";
-      position: absolute;
-      border-radius: 50%;
-      height: 100%;
-      width: 100%;
-      top: 0;
-      left: 0;
-      background: linear-gradient(90deg, rgba(0, 0, 0, 0.7) 10%, rgba(85, 85, 85, 0.1) 100%);
-      animation: rotation 12s infinite linear;
-    }
+  h1 {
+    color: #fff;
+    font-size: 8rem;
+    line-height: 9rem;
+    font-family: var(--font-bold);
+    text-shadow: 0 0 40px rgba(0,0,0,0.7);
 
-    .content {
-      position: relative;
-      /*animation: rotation 10s infinite linear reverse;*/
-    }
-
-    h1 {
-      font-size: 2em;
-      margin-bottom: 1em;
-    }
-
-    p {
-      font-size: 1.2em;
+    span {
+      display: block;
+      text-align: center;
     }
   }
+
+  p {
+    font-size: 1.2em;
+  }
+
 
   .lines {
     display: flex;
@@ -130,7 +107,6 @@
     margin: 2rem 0 3rem;
     line-height: 4rem;
     font-size: 3.5rem;
-    font-family: 'Rubik Variable', sans-serif;
     font-weight: 600;
 
     span {
@@ -138,7 +114,7 @@
 
 
       &.word-1 {
-        background: linear-gradient(90deg, rgb(255, 100, 0) 0%, rgba(9,9,121,0.5) 35%, rgba(143,46,0,1) 100%);
+        background: linear-gradient(90deg, rgb(255, 100, 0) 0%, rgba(9, 9, 121, 0.5) 35%, rgba(143, 46, 0, 1) 100%);
         background-size: cover;
         -webkit-background-clip: text;
         background-clip: text;
@@ -146,7 +122,7 @@
       }
 
       &.word-0, &.word-2 {
-        background: linear-gradient(90deg, rgba(143,46,0,1) 0%, rgba(9,9,121,0.5) 35%, rgba(255,100,0,1) 100%);
+        background: linear-gradient(90deg, rgba(143, 46, 0, 1) 0%, rgba(9, 9, 121, 0.5) 35%, rgba(255, 100, 0, 1) 100%);
         background-size: cover;
         -webkit-background-clip: text;
         background-clip: text;

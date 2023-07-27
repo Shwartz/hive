@@ -97,8 +97,23 @@ meter {
 SITE UTILS
 */
 
+@font-face {
+    font-family: 'Segoe UI Normal';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''), url('/fonts/segoe-ui-4-cufonfonts/Segoe UI.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Segoe UI Bold';
+    font-style: normal;
+    src: local(''), url('/fonts/segoe-ui-4-cufonfonts/Segoe UI Bold.ttf') format('truetype');
+}
+
 :root {
-    --font-body: Helvetica Neue, Helvetica,Arial,sans-serif, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+    --font-body: 'Segoe UI Normal', 'Segoe UI', Helvetica Neue, Helvetica,Arial,sans-serif, Roboto, Oxygen, Ubuntu,
+    Cantarell, 'Open Sans', sans-serif;
+    --font-bold: 'Segoe UI Bold', 'Segoe UI', Helvetica Neue, Helvetica,Arial,sans-serif, Roboto, Oxygen, Ubuntu,
     Cantarell, 'Open Sans', sans-serif;
     font-family: var(--font-body);
 }

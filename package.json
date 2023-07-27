@@ -14,7 +14,6 @@
 		"format": "prettier --plugin-search-dir . --write ."
 	},
 	"dependencies": {
-		"@fontsource-variable/rubik": "^5.0.7"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^2.0.0",
