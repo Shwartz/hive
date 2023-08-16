@@ -104,6 +104,7 @@ SITE UTILS
     src: local(''), url('/fonts/segoe-ui-4-cufonfonts/Segoe UI.ttf') format('truetype');
 }
 
+/** Font weight as 900 **/
 @font-face {
     font-family: 'Segoe UI Bold';
     font-style: normal;
@@ -148,17 +149,24 @@ strong {
 section {
     margin: auto;
     padding: 1rem;
+    display: flex;
+    justify-content: center;
 }
 
-section.medium {
+section.medium > div {
     max-width: 800px;
 }
 
-section.large {
+section.large > div {
     max-width: 1200px;
 }
 
-.center {
+section.dark {
+    background: #1D1D1D;
+    color: #fff;
+}
+
+.center{
     text-align: center;
 }
 
@@ -169,6 +177,12 @@ a {
 
 a:hover {
     color: #9e3800;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
 }
 
 /**

@@ -5,7 +5,7 @@
   import { base } from "$app/paths";
 
   let animate = false;
-  const words = ["London", "Digital", "Studio", "🪄"];
+  const words = ["We Are", "Avanade X"];
   export let data;
 
   onMount(() => {
@@ -21,50 +21,69 @@
 <div class="hero">
   <div class="content">
     <h1>
-      <span>We Are</span>
-      <span>Avanade X</span>
-    </h1>
-  </div>
-</div>
-
-<section class="medium center">
-  <h1 class="lines">&nbsp;
-    {#if animate}
-      {#each words as word, i}
+      {#if animate}
+        {#each words as word, i}
             <span
               class={`word-${i}`}
               in:fly|global={{
                     delay: 500 * (i + 1),
                     duration: 300,
                     easing: backOut,
-                    y: (i === 3) ? -100: 100,
+                    y: (i === 1) ? 100: -100,
                 }}
             >
-                {word}
+              <span>{word}</span>
             </span>
-      {/each}
-    {/if}
-  </h1>
+        {/each}
+      {/if}
+    </h1>
+  </div>
+</div>
 
-  <p>Short description</p>
-  <p>By the way, if we could get 12 portfolio cases it would look awesome on a screen. The reason is that it would
-    nicely divide by every screen size.</p>
+<section class="large">
+  <ul class="nav">
+    <li><a href="#">Avanade X</a></li>
+    <li><a href="#">What is Avanade X?</a></li>
+    <li><a href="#">Our Work</a></li>
+  </ul>
+</section>
+
+<section class="medium center">
+  <div>
+    <h2 class="brandTitle">What is Avanade X?</h2>
+
+    <p>Short description</p>
+    <p>By the way, if we could get 12 portfolio cases it would look awesome on a screen. The reason is that it would
+      nicely divide by every screen size.</p>
+  </div>
+</section>
+
+<section class="medium dark">
+  <div>
+    <h2 class="brandTitle">Our Work</h2>
+
+    <p>Short description</p>
+    <p>By the way, if we could get 12 portfolio cases it would look awesome on a screen. The reason is that it would
+      nicely divide by every screen size.</p>
+  </div>
 </section>
 
 <section class="large">
-  <h3 class="center">Our work 2</h3>
-  <div class="cards">
-    {#each data.posts as post}
-      <div class="card">
-        <div class="head">
-          <img src="{base}/images/{post.image}" alt={post.title}>
+  <div>
+    <h3 class="center">Our work 2</h3>
+    <div class="cards">
+      {#each data.posts as post}
+        <div class="card">
+          <div class="head">
+            <img src="{base}/images/{post.image}" alt={post.title}>
+          </div>
+          <div class="content">
+            <h3><a href={base}/{post.slug} class="title">{post.title}</a></h3>
+            <p class="description">{post.description}</p>
+          </div>
         </div>
-        <div class="content">
-          <h3><a href={base}/{post.slug} class="title">{post.title}</a></h3>
-          <p class="description">{post.description}</p>
-        </div>
-      </div>
-    {/each}
+      {/each}
+    </div>
   </div>
 </section>
 
@@ -79,19 +98,18 @@
     align-items: center;
     background: url('$lib/images/hero_bg-2.jpg') center no-repeat;
     background-size: cover;
-  }
 
+    h1 {
+      color: #fff;
+      font-size: 8rem;
+      line-height: 9rem;
+      font-family: var(--font-bold);
+      text-shadow: 0 0 40px rgba(0, 0, 0, 0.7);
 
-  h1 {
-    color: #fff;
-    font-size: 8rem;
-    line-height: 9rem;
-    font-family: var(--font-bold);
-    text-shadow: 0 0 40px rgba(0,0,0,0.7);
-
-    span {
-      display: block;
-      text-align: center;
+      span {
+        display: block;
+        text-align: center;
+      }
     }
   }
 
@@ -99,36 +117,14 @@
     font-size: 1.2em;
   }
 
-
-  .lines {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    margin: 2rem 0 3rem;
-    line-height: 4rem;
-    font-size: 3.5rem;
-    font-weight: 600;
-
-    span {
-      display: inline-block;
-
-
-      &.word-1 {
-        background: linear-gradient(90deg, rgb(255, 100, 0) 0%, rgba(9, 9, 121, 0.5) 35%, rgba(143, 46, 0, 1) 100%);
-        background-size: cover;
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-      }
-
-      &.word-0, &.word-2 {
-        background: linear-gradient(90deg, rgba(143, 46, 0, 1) 0%, rgba(9, 9, 121, 0.5) 35%, rgba(255, 100, 0, 1) 100%);
-        background-size: cover;
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-      }
-    }
+  h2.brandTitle {
+    background: linear-gradient(90deg, #CE0569 0%, #FF5800 100%);
+    background-size: cover;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 5rem;
+    font-family: var(--font-bold);
   }
 
   .cards {
