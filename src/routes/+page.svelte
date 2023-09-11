@@ -3,6 +3,7 @@
   import { backOut } from "svelte/easing";
   import { onMount } from "svelte";
   import { base } from "$app/paths";
+  import WhatIsAvanade from "../componets/pages/WhatIsAvanade.svelte";
 
   let animate = false;
   const words = ["We Are", "Avanade X"];
@@ -18,7 +19,7 @@
   <meta name="description" content="Portfolio">
 </svelte:head>
 
-<div class="hero">
+<div id="avanadeX" class="hero">
   <div class="content">
     <h1>
       {#if animate}
@@ -40,31 +41,42 @@
   </div>
 </div>
 
-<section class="large">
+<section class="large sticky">
   <ul class="nav">
-    <li><a href="#">Avanade X</a></li>
-    <li><a href="#">What is Avanade X?</a></li>
-    <li><a href="#">Our Work</a></li>
+    <li><a href="#avanadeX">Avanade X</a></li>
+    <li><a href="#whatIsAvanade">What is Avanade X?</a></li>
+    <li><a href="#ourWork">Our Work</a></li>
   </ul>
 </section>
 
-<section class="medium center">
-  <div>
-    <h2 class="brandTitle">What is Avanade X?</h2>
+<WhatIsAvanade />
 
-    <p>Short description</p>
-    <p>By the way, if we could get 12 portfolio cases it would look awesome on a screen. The reason is that it would
-      nicely divide by every screen size.</p>
-  </div>
-</section>
-
-<section class="medium dark">
+<section id="ourWork" class="medium dark">
   <div>
     <h2 class="brandTitle">Our Work</h2>
 
     <p>Short description</p>
     <p>By the way, if we could get 12 portfolio cases it would look awesome on a screen. The reason is that it would
-      nicely divide by every screen size.</p>
+      nicely divide by every screen size.</p><p>By the way, if we could get 12 portfolio cases it would look awesome on a screen. The reason is that it would
+    nicely divide by every screen size.</p><p>By the way, if we could get 12 portfolio cases it would look awesome on a screen. The reason is that it would
+    nicely divide by every screen size.</p><p>By the way, if we could get 12 portfolio cases it would look awesome on a screen. The reason is that it would
+    nicely divide by every screen size.</p><p>By the way, if we could get 12 portfolio cases it would look awesome on a screen. The reason is that it would
+    nicely divide by every screen size.</p><p>By the way, if we could get 12 portfolio cases it would look awesome on a screen. The reason is that it would
+    nicely divide by every screen size.</p><p>By the way, if we could get 12 portfolio cases it would look awesome on a screen. The reason is that it would
+    nicely divide by every screen size.</p><p>By the way, if we could get 12 portfolio cases it would look awesome on a screen. The reason is that it would
+    nicely divide by every screen size.</p><p>By the way, if we could get 12 portfolio cases it would look awesome on a screen. The reason is that it would
+    nicely divide by every screen size.</p><p>By the way, if we could get 12 portfolio cases it would look awesome on a screen. The reason is that it would
+    nicely divide by every screen size.</p><p>By the way, if we could get 12 portfolio cases it would look awesome on a screen. The reason is that it would
+    nicely divide by every screen size.</p><p>By the way, if we could get 12 portfolio cases it would look awesome on a screen. The reason is that it would
+    nicely divide by every screen size.</p><p>By the way, if we could get 12 portfolio cases it would look awesome on a screen. The reason is that it would
+    nicely divide by every screen size.</p><p>By the way, if we could get 12 portfolio cases it would look awesome on a screen. The reason is that it would
+    nicely divide by every screen size.</p><p>By the way, if we could get 12 portfolio cases it would look awesome on a screen. The reason is that it would
+    nicely divide by every screen size.</p><p>By the way, if we could get 12 portfolio cases it would look awesome on a screen. The reason is that it would
+    nicely divide by every screen size.</p><p>By the way, if we could get 12 portfolio cases it would look awesome on a screen. The reason is that it would
+    nicely divide by every screen size.</p><p>By the way, if we could get 12 portfolio cases it would look awesome on a screen. The reason is that it would
+    nicely divide by every screen size.</p><p>By the way, if we could get 12 portfolio cases it would look awesome on a screen. The reason is that it would
+    nicely divide by every screen size.</p><p>By the way, if we could get 12 portfolio cases it would look awesome on a screen. The reason is that it would
+    nicely divide by every screen size.</p>
   </div>
 </section>
 
@@ -100,7 +112,7 @@
     background-size: cover;
 
     h1 {
-      color: #fff;
+      color: var(--cWhite);
       font-size: 8rem;
       line-height: 9rem;
       font-family: var(--font-bold);
@@ -113,19 +125,14 @@
     }
   }
 
-  p {
-    font-size: 1.2em;
+  .sticky {
+    position: sticky;
+    top: 0;
+    padding: 2rem 1rem;
+    background: rgba(255,255,255,0.95);
   }
 
-  h2.brandTitle {
-    background: linear-gradient(90deg, #CE0569 0%, #FF5800 100%);
-    background-size: cover;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    font-size: 5rem;
-    font-family: var(--font-bold);
-  }
+
 
   .cards {
     display: grid;
@@ -133,7 +140,7 @@
     gap: 1rem;
 
     .card {
-      border: 1px solid #f1bd8e;
+      border: 1px solid var(--cOrange);
       border-radius: 5px;
       overflow: hidden;
 

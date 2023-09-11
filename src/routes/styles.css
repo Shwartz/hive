@@ -20,6 +20,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* Reapply the pointer cursor for anchor tags */
 a, button {
     cursor: revert;
@@ -117,6 +121,12 @@ SITE UTILS
     --font-bold: 'Segoe UI Bold', 'Segoe UI', Helvetica Neue, Helvetica,Arial,sans-serif, Roboto, Oxygen, Ubuntu,
     Cantarell, 'Open Sans', sans-serif;
     font-family: var(--font-body);
+    --cWhite: #fff;
+    --cLightSection: #F5F7FA;
+    --cOrange: #FF5800;
+    --cDarkOrange: #9e3800;
+    --cCrimson: #CE0569;
+    --cBlack: #1D1D1D;
 }
 
 body {
@@ -151,6 +161,7 @@ section {
     padding: 1rem;
     display: flex;
     justify-content: center;
+    scroll-margin-top: 3rem;
 }
 
 section.medium > div {
@@ -161,28 +172,64 @@ section.large > div {
     max-width: 1200px;
 }
 
-section.dark {
-    background: #1D1D1D;
-    color: #fff;
+section.light {
+    background: var(--cLightSection);
 }
 
-.center{
+section.dark {
+    background: var(--cBlack);
+    color: var(--cWhite);
+}
+
+.center {
     text-align: center;
 }
 
+p {
+    font-size: 1.2em;
+}
+
 a {
-    color: #ff5800;
+    color: var(--cOrange);
     text-decoration: underline;
 }
 
 a:hover {
-    color: #9e3800;
+    color: var(--cDarkOrange);
 }
 
 .nav {
     display: flex;
     justify-content: center;
     gap: 24px;
+    font-family: var(--font-bold);
+}
+
+.nav a {
+    background: linear-gradient(90deg, var(--cCrimson) 0%, var(--cOrange) 100%);
+    background-size: cover;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.nav a:hover {
+    background: linear-gradient(90deg, var(--cOrange) 0%, var(--cOrange) 100%);
+    background-size: cover;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.brandTitle {
+    margin-top: 2rem;
+    background: linear-gradient(90deg, var(--cCrimson) 0%, var(--cOrange) 100%);
+    background-size: cover;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 5rem;
+    font-family: var(--font-bold);
 }
 
 /**
