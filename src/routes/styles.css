@@ -160,10 +160,13 @@ strong {
 
 section {
     margin: auto;
-    padding: 1rem;
     display: flex;
     justify-content: center;
     scroll-margin-top: 3rem;
+}
+
+section > div {
+    padding: 1rem;
 }
 
 section.medium > div {
