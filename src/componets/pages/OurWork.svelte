@@ -1,10 +1,14 @@
+<script>
+  import { base } from "$app/paths";
+</script>
+
 <section id="ourWork" class="large dark mHeight">
   <div class="wrap">
     <div class="text">
       <h2 class="brandTitle">Our Work</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua.</p>
-      <a href="#">See our work</a>
+      <a href="{base}/our-work">See our work</a>
     </div>
   </div>
 </section>

@@ -16,10 +16,6 @@
       </div>
     {/key}
   </main>
-
-  <footer>
-    <p>This is FOOTER</p>
-  </footer>
 </div>
 
 <style>

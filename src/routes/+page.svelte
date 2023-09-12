@@ -2,7 +2,6 @@
   import { fly } from "svelte/transition";
   import { backOut } from "svelte/easing";
   import { onMount } from "svelte";
-  import { base } from "$app/paths";
   import WhatIsAvanade from "../componets/pages/WhatIsAvanade.svelte";
   import OurWork from "../componets/pages/OurWork.svelte";
   import Testimonials from "../componets/pages/Testimonials.svelte";
@@ -65,7 +64,7 @@
 <OurStars />
 <ContactUs />
 
-<section class="large">
+<!--<section class="large">
   <div>
     <h3 class="center">Our work 2</h3>
     <div class="cards">
@@ -82,10 +81,7 @@
       {/each}
     </div>
   </div>
-</section>
-
-<h3>Testimonials</h3>
-<p>Snippets of testimonials, probably some slide</p>
+</section>-->
 
 <style lang="scss">
   .hero {
@@ -116,8 +112,6 @@
     padding: 2rem 1rem;
     background: rgba(255,255,255,0.95);
   }
-
-
 
   .cards {
     display: grid;
