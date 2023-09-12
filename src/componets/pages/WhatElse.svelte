@@ -15,7 +15,6 @@
       display: flex;
       align-items: center;
       width: 100%;
-      background: url('$lib/images/ipad.png') no-repeat var(--cBlack) 100% 100%;
     }
 
     .text {

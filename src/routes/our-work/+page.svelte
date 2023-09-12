@@ -10,7 +10,11 @@
 
 <section class="large">
   <div>
-    <h3 class="center">Our work 2</h3>
+    <div>
+      <p>NAVIGATION</p>
+      <p><a href="/">Back to home</a></p>
+    </div>
+    <h3 class="center">Our work</h3>
     <div class="cards">
       {#each data.posts as post}
         <div class="card">

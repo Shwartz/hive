@@ -3,4 +3,4 @@
 </svelte:head>
 
 <h1>The page you requested could not be found.</h1>
-<p><a href="/">back to home page</a></p>
+<p><a href="/">Back to home page</a></p>

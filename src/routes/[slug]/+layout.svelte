@@ -6,7 +6,7 @@
 <div class="app">
   <section>
     <header>
-      Back to <a href="{base}/">Home</a>
+      Back to <a href="{base}/our-work">Our Work</a>
     </header>
   </section>
   <main>

@@ -22,7 +22,7 @@
   <title>Home - Ava Portfolio</title>
   <meta name="description" content="Portfolio">
 </svelte:head>
-
+<p>MAIN NAV PLACEHOLDER</p>
 <div id="avanadeX" class="hero">
   <div class="content">
     <h1>
@@ -44,7 +44,6 @@
     </h1>
   </div>
 </div>
-
 <section class="large sticky">
   <ul class="nav">
     <li><a href="#avanadeX">Avanade X</a></li>
