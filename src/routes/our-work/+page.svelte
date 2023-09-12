@@ -12,7 +12,7 @@
   <div>
     <div>
       <p>NAVIGATION</p>
-      <p><a href="/">Back to home</a></p>
+      <p><a href="{base}/">Back to home</a></p>
     </div>
     <h3 class="center">Our work</h3>
     <div class="cards">
