@@ -1,7 +1,7 @@
-<section id="ourWork" class="large dark mHeight">
+<section id="contactUs" class="large dark mHeight">
   <div class="wrap">
     <div class="text">
-      <h2 class="brandTitle">Our Work</h2>
+      <h2 class="brandTitle">Contact Us</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua.</p>
       <a href="#">See our work</a>

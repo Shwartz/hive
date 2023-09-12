@@ -186,6 +186,10 @@ section.dark {
     color: var(--cWhite);
 }
 
+section.mHeight {
+    min-height: 880px;
+}
+
 .center {
     text-align: center;
 }

@@ -5,6 +5,10 @@
   import { base } from "$app/paths";
   import WhatIsAvanade from "../componets/pages/WhatIsAvanade.svelte";
   import OurWork from "../componets/pages/OurWork.svelte";
+  import Testimonials from "../componets/pages/Testimonials.svelte";
+  import WhatElse from "../componets/pages/WhatElse.svelte";
+  import OurStars from "../componets/pages/OurStars.svelte";
+  import ContactUs from "../componets/pages/ContactUs.svelte";
 
   let animate = false;
   const words = ["We Are", "Avanade X"];
@@ -47,11 +51,19 @@
     <li><a href="#avanadeX">Avanade X</a></li>
     <li><a href="#whatIsAvanade">What is Avanade X?</a></li>
     <li><a href="#ourWork">Our Work</a></li>
+    <li><a href="#testimonials">Testimonials</a></li>
+    <li><a href="#whatElse">What Else?</a></li>
+    <li><a href="#ourStars">Our Stars</a></li>
+    <li><a href="#contactUs">Contact Us</a></li>
   </ul>
 </section>
 
 <WhatIsAvanade />
 <OurWork />
+<Testimonials />
+<WhatElse />
+<OurStars />
+<ContactUs />
 
 <section class="large">
   <div>
