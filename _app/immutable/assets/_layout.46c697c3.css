@@ -1,0 +1,1 @@
+.smol-flexbox-grid{--min:30ch;--gap:2rem;display:flex;flex-wrap:wrap;gap:var(--gap);margin-top:4rem}@media (min-width: 1000px){.smol-flexbox-grid{--gap:4em}}@media (min-width: 1400px){.smol-flexbox-grid{--gap:6em}}.smol-flexbox-grid>*{flex:1 1 var(--min);text-align:center}
