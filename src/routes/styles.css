@@ -223,7 +223,7 @@ a:hover {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    font-size: clamp(1.75rem, 4vw + 1rem, 3rem);
+    font-size: clamp(1.75rem, 4vw + 2rem, 6rem);
     font-family: var(--font-bold);
 }
 
