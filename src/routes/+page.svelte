@@ -8,6 +8,7 @@
   import WhatElse from "../componets/pages/WhatElse.svelte";
   import OurStars from "../componets/pages/OurStars.svelte";
   import ContactUs from "../componets/pages/ContactUs.svelte";
+  import { base } from "$app/paths";
 
   let animate = false;
   const words = ["We Are", "Avanade X"];
@@ -22,7 +23,11 @@
   <title>Home - Ava Portfolio</title>
   <meta name="description" content="Portfolio">
 </svelte:head>
-<p>MAIN NAV PLACEHOLDER</p>
+<div class="nav-placeholder">
+  <div>
+    <a href="{base}/">Avas Logo</a>
+  </div>
+</div>
 <div id="avanadeX" class="hero">
   <div class="content">
     <h1>
@@ -63,26 +68,22 @@
 <OurStars />
 <ContactUs />
 
-<!--<section class="large">
-  <div>
-    <h3 class="center">Our work 2</h3>
-    <div class="cards">
-      {#each data.posts as post}
-        <div class="card">
-          <div class="head">
-            <img src="{base}/images/{post.image}" alt={post.title}>
-          </div>
-          <div class="content">
-            <h3><a href={base}/{post.slug} class="title">{post.title}</a></h3>
-            <p class="description">{post.description}</p>
-          </div>
-        </div>
-      {/each}
-    </div>
-  </div>
-</section>-->
-
 <style lang="scss">
+  .nav-placeholder {
+    padding: 8px;
+    background: var(--cLightSection);
+
+    > div {
+      display: flex;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    a {
+      padding: 8px;
+    }
+  }
+
   .hero {
     display: flex;
     height: 780px;
@@ -109,7 +110,7 @@
     position: sticky;
     top: 0;
     padding: 2rem 1rem;
-    background: rgba(255,255,255,0.95);
+    background: rgba(255,255,255,1);
   }
 
   .cards {
