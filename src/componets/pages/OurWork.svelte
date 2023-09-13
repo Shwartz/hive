@@ -8,6 +8,8 @@
       <h2 class="brandTitle">Our Work</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua.</p>
       <a href="{base}/our-work">See our work</a>
     </div>
   </div>
@@ -24,6 +26,11 @@
 
     .text {
       max-width: 500px;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 1rem;
     }
   }
 </style>

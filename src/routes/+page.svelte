@@ -2,13 +2,13 @@
   import { fly } from "svelte/transition";
   import { backOut } from "svelte/easing";
   import { onMount } from "svelte";
+  import { base } from "$app/paths";
   import WhatIsAvanade from "../componets/pages/WhatIsAvanade.svelte";
   import OurWork from "../componets/pages/OurWork.svelte";
   import Testimonials from "../componets/pages/Testimonials.svelte";
   import WhatElse from "../componets/pages/WhatElse.svelte";
   import OurStars from "../componets/pages/OurStars.svelte";
   import ContactUs from "../componets/pages/ContactUs.svelte";
-  import { base } from "$app/paths";
 
   let animate = false;
   const words = ["We Are", "Avanade X"];
@@ -94,9 +94,9 @@
 
     h1 {
       color: var(--cWhite);
-      font-size: 8rem;
       line-height: 9rem;
       font-family: var(--font-bold);
+      font-size: clamp(1.75rem, 6vw + 3rem, 8rem);
       text-shadow: 0 0 40px rgba(0, 0, 0, 0.7);
 
       span {
@@ -111,6 +111,31 @@
     top: 0;
     padding: 2rem 1rem;
     background: rgba(255,255,255,1);
+  }
+
+  .nav {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 8px;
+    font-family: var(--font-bold);
+    width: 100%;
+    max-width: 1200px;
+  }
+
+  .nav a {
+    background: linear-gradient(90deg, var(--cCrimson) 0%, var(--cOrange) 100%);
+    background-size: cover;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .nav a:hover {
+    background: linear-gradient(90deg, var(--cOrange) 0%, var(--cOrange) 100%);
+    background-size: cover;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
   }
 
   .cards {

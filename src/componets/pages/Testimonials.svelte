@@ -30,6 +30,6 @@
 
   h3 {
     font-family: var(--font-bold);
-    font-size: 2rem;
+    font-size: clamp(1rem, 4vw + 1rem, 2rem);
   }
 </style>

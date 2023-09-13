@@ -20,5 +20,10 @@
     .text {
       max-width: 500px;
     }
+
+    a {
+      display: inline-block;
+      margin-top: 1rem;
+    }
   }
 </style>

@@ -147,6 +147,7 @@ h3 {
 }
 
 p {
+    margin-top: 1rem;
     line-height: 1.6rem;
 }
 
@@ -171,7 +172,7 @@ section > div {
 
 @media (min-width: 800px) {
     section > div {
-        padding: 1rem;
+        padding: 1rem 4rem;
     }
 }
 
@@ -215,29 +216,6 @@ a:hover {
     color: var(--cDarkOrange);
 }
 
-.nav {
-    display: flex;
-    justify-content: center;
-    gap: 24px;
-    font-family: var(--font-bold);
-}
-
-.nav a {
-    background: linear-gradient(90deg, var(--cCrimson) 0%, var(--cOrange) 100%);
-    background-size: cover;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-}
-
-.nav a:hover {
-    background: linear-gradient(90deg, var(--cOrange) 0%, var(--cOrange) 100%);
-    background-size: cover;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-}
-
 .brandTitle {
     margin-top: 2rem;
     background: linear-gradient(90deg, var(--cCrimson) 0%, var(--cOrange) 100%);
@@ -245,7 +223,7 @@ a:hover {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    font-size: 5rem;
+    font-size: clamp(1.75rem, 4vw + 1rem, 3rem);
     font-family: var(--font-bold);
 }
 
