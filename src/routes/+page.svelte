@@ -12,7 +12,6 @@
 
   let animate = false;
   const words = ["We Are", "Avanade X"];
-  export let data;
 
   onMount(() => {
     animate = true;
