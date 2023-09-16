@@ -8,9 +8,11 @@ categories:
 - business
 - banking  
 ---
-
+<script>
+    import { base } from "$app/paths";
+</script>
 ## Svelte
 
 Media inside the **static** folder is served from `/`.
 
-![Svelte](/images/card-demo4.jpg)
+![Svelte]({base}/images/card-demo4.jpg)
