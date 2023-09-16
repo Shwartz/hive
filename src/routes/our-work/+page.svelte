@@ -22,7 +22,7 @@
             <img src="{base}/images/{post.image}" alt={post.title}>
           </div>
           <div class="content">
-            <h3><a href={base}/{post.slug} class="title">{post.title}</a></h3>
+            <h3><a href={base}/our-work/{post.slug} class="title">{post.title}</a></h3>
             <p class="description">{post.description}</p>
           </div>
         </div>

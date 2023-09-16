@@ -3,12 +3,12 @@
   import { backOut } from "svelte/easing";
   import { onMount } from "svelte";
   import { base } from "$app/paths";
-  import WhatIsAvanade from "../componets/pages/WhatIsAvanade.svelte";
-  import OurWork from "../componets/pages/OurWork.svelte";
-  import Testimonials from "../componets/pages/Testimonials.svelte";
-  import WhatElse from "../componets/pages/WhatElse.svelte";
-  import OurStars from "../componets/pages/OurStars.svelte";
-  import ContactUs from "../componets/pages/ContactUs.svelte";
+  import WhatIsAvanade from "../componets/sections/WhatIsAvanade.svelte";
+  import OurWork from "../componets/sections/OurWork.svelte";
+  import Testimonials from "../componets/sections/Testimonials.svelte";
+  import WhatElse from "../componets/sections/WhatElse.svelte";
+  import OurStars from "../componets/sections/OurStars.svelte";
+  import ContactUs from "../componets/sections/ContactUs.svelte";
 
   let animate = false;
   const words = ["We Are", "Avanade X"];
@@ -136,47 +136,5 @@
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-  }
-
-  .cards {
-    display: grid;
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-    gap: 1rem;
-
-    .card {
-      border: 1px solid var(--cOrange);
-      border-radius: 5px;
-      overflow: hidden;
-
-      .head {
-        aspect-ratio: 16/9;
-
-        img {
-          display: block;
-          object-fit: cover;
-          height: 100%;
-        }
-      }
-
-      .content {
-        padding: 0.5rem;
-      }
-    }
-
-    a {
-      display: block;
-    }
-
-    @media (min-width: 480px) {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    @media (min-width: 800px) {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    @media (min-width: 1024px) {
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
   }
 </style>

@@ -13,4 +13,4 @@ categories:
 
 Media inside the **static** folder is served from `/`.
 
-![Svelte](images/card-demo3.jpg)
+![Svelte](/images/card-demo3.jpg)

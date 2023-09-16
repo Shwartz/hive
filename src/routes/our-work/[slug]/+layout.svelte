@@ -1,5 +1,5 @@
 <script>
-  import "./../styles.css";
+  import "../../styles.css";
   import { base } from "$app/paths";
 </script>
 
