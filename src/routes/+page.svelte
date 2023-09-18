@@ -88,7 +88,7 @@
     height: 780px;
     justify-content: center;
     align-items: center;
-    background: url('$lib/images/hero_bg-2.jpg') center no-repeat;
+    background: url('/images/hero_bg-2.jpg') center no-repeat;
     background-size: cover;
 
     h1 {

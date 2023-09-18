@@ -1,3 +1,6 @@
+<script>
+  import { base } from "$app/paths";
+</script>
 <section id="whatIsAvanade" class="large light mHeight">
   <div>
     <h2 class="brandTitle center">What is Avanade X?</h2>
@@ -19,7 +22,7 @@
           magna aliqua.</p>
       </div>
     </div>
-    <img src="$lib/images/map.png" alt="world map">
+    <img src="{base}/images/map.png" alt="world map">
   </div>
 </section>
 
