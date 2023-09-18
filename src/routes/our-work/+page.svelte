@@ -10,11 +10,7 @@
 
 <section class="large">
   <div>
-    <div>
-      <p>NAVIGATION</p>
-      <p><a href="{base}/">Back to home</a></p>
-    </div>
-    <h3 class="center">Our work</h3>
+    <h1 class="brandTitle center">Our work</h1>
     <div class="cards">
       {#each data.posts as post}
         <div class="card">
@@ -33,9 +29,14 @@
 
 <style lang="scss">
   .cards {
+    --min: 28ch;
+    --gap: 1rem;
+
     display: grid;
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-    gap: 1rem;
+    grid-gap: var(--gap);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
+
+    margin-top: 3rem;
 
     .card {
       border: 1px solid var(--cOrange);
@@ -59,18 +60,6 @@
 
     a {
       display: block;
-    }
-
-    @media (min-width: 480px) {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    @media (min-width: 800px) {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    @media (min-width: 1024px) {
-      grid-template-columns: repeat(4, minmax(0, 1fr));
     }
   }
 </style>

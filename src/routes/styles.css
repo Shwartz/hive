@@ -137,7 +137,6 @@ body {
 
 h1 {
     font-size: 2rem;
-    line-height: 3rem;
 }
 
 h3 {
@@ -168,11 +167,18 @@ section {
 
 section > div {
     padding: 1rem 1rem 4rem;
+    width: 100%;
 }
 
 @media (min-width: 800px) {
     section > div {
         padding: 1rem 4rem;
+    }
+}
+
+@media (min-width: 1300px) {
+    section > div {
+        padding: 1rem 0;
     }
 }
 
