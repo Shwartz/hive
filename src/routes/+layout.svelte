@@ -24,7 +24,7 @@
 
   /* Layout */
   :global(.smol-flexbox-grid) {
-    --min: 30ch;
+    --min: 31ch;
     --gap: 2rem;
 
     @media (min-width: 1000px) {
