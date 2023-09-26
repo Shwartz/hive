@@ -2,6 +2,12 @@
   import { base } from "$app/paths";
 
   export let data;
+  export let currentTag = "all";
+  const handleTag = (tag) => currentTag = tag;
+
+  $: filteredPosts = currentTag === 'all'
+    ? data.posts
+    : data.posts.filter(post => post.categories.includes(currentTag));
 </script>
 
 <svelte:head>
@@ -12,18 +18,32 @@
 <section class="large">
   <div>
     <h1 class="brandTitle center">Our work</h1>
+    <p>Current tag: {currentTag}</p>
+    <ul>
+      <li><a on:click={() => handleTag('all')} href="#all">All</a></li>
+      <li><a on:click={() => handleTag('insurance')} href="#insurance">Insurance</a></li>
+      <li><a on:click={() => handleTag('health')} href="#health">Health</a></li>
+      <li><a on:click={() => handleTag('capitalMarkets')} href="#capitalMarkets">Capital Markets</a></li>
+      <li><a on:click={() => handleTag('energy')} href="#energy">Energy</a></li>
+      <li><a on:click={() => handleTag('banking')} href="#banking">Banking</a></li>
+    </ul>
+    {data.posts.length}
     <div class="cards">
-      {#each data.posts as post}
-        <div class="card">
-          <div class="head">
-            <img src="{base}/images/{post.image}" alt={post.title}>
+      {#each filteredPosts as post}
+          <div class="card">
+            <div class="head">
+              <img src="{base}/images/{post.image}" alt={post.title}>
+            </div>
+            <div class="content">
+              {#each post.categories as category}
+                <span>{category}</span>
+              {/each}
+              <h3><a href="{base}/our-work/{post.slug}" class="title">{post.title}</a></h3>
+              <p class="description">{post.description}</p>
+            </div>
           </div>
-          <div class="content">
-            <h3><a href={base}/our-work/{post.slug} class="title">{post.title}</a></h3>
-            <p class="description">{post.description}</p>
-          </div>
-        </div>
       {/each}
+
       <div class="card experiment">
         <div class="bg-image">
           <img src="{base}/images/card-demo1.jpg" alt="image" />
@@ -59,7 +79,7 @@
         right: 0;
         bottom: 0;
         left: 0;
-        background-color: rgba(0,0,0,0.4);
+        background-color: rgba(0, 0, 0, 0.4);
       }
 
       img {

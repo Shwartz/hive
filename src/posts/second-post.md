@@ -5,8 +5,7 @@ date: '2023-07-02'
 published: true
 image: 'card-demo2.jpg'
 categories:
-- business
-- banking  
+- health
 ---
 <script>
     import { base } from "$app/paths";

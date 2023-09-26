@@ -5,8 +5,7 @@ date: '2023-07-01'
 published: true
 image: 'card-demo1.jpg'
 categories:
-- business
-- banking
+- energy
 ---
 
 # Do What Matters
