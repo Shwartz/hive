@@ -4,8 +4,9 @@
   export let data;
   export let currentTag = "all";
   const handleTag = (tag) => currentTag = tag;
+  const categories = data.posts.map((post) => post.categories).flat();
 
-  $: filteredPosts = currentTag === 'all'
+  $: filteredPosts = currentTag === "all"
     ? data.posts
     : data.posts.filter(post => post.categories.includes(currentTag));
 </script>
@@ -18,101 +19,50 @@
 <section class="large">
   <div>
     <h1 class="brandTitle center">Our work</h1>
-    <p>Current tag: {currentTag}</p>
-    <ul>
-      <li><a on:click={() => handleTag('all')} href="#all">All</a></li>
-      <li><a on:click={() => handleTag('insurance')} href="#insurance">Insurance</a></li>
-      <li><a on:click={() => handleTag('health')} href="#health">Health</a></li>
-      <li><a on:click={() => handleTag('capitalMarkets')} href="#capitalMarkets">Capital Markets</a></li>
-      <li><a on:click={() => handleTag('energy')} href="#energy">Energy</a></li>
-      <li><a on:click={() => handleTag('banking')} href="#banking">Banking</a></li>
-    </ul>
-    {data.posts.length}
+    <p class="mw">Lorem ipsum dolor sit amet consectetur. Scelerisque ac ultricies volutpat a massa vel lectus nulla.
+      Augue
+      ultricies nisl gravida consequat adipiscing etiam amet. Mauris nec tortor justo aenean quam senectus.</p>
+
+    <div class="catsNav">
+      <button aria-current="{currentTag === 'all'}" class="btn" type="button" on:click={() => handleTag('all')}>All
+      </button>
+      {#each categories as cat}
+        <button aria-current="{currentTag === cat}" class="btn" type="button"
+                on:click={() => handleTag(cat)}>{cat}</button>
+      {/each}
+    </div>
+
     <div class="cards">
       {#each filteredPosts as post}
-          <div class="card">
-            <div class="head">
-              <img src="{base}/images/{post.image}" alt={post.title}>
-            </div>
-            <div class="content">
+        <div class="card">
+          <div class="head">
+            <img src="{base}/images/{post.image}" alt={post.title}>
+          </div>
+          <div class="content">
+            <h3><a href="{base}/our-work/{post.slug}" class="title">{post.title}</a></h3>
+            <div class="categories">
               {#each post.categories as category}
-                <span>{category}</span>
+                <span>#{category}</span>
               {/each}
-              <h3><a href="{base}/our-work/{post.slug}" class="title">{post.title}</a></h3>
-              <p class="description">{post.description}</p>
             </div>
           </div>
+        </div>
       {/each}
-
-      <div class="card experiment">
-        <div class="bg-image">
-          <img src="{base}/images/card-demo1.jpg" alt="image" />
-        </div>
-        <div class="content">
-          <h3><a href={base}/our-work/banking class="title">Test article</a></h3>
-          <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis efficitur libero,
-            ac blandit urna. </p>
-        </div>
-      </div>
     </div>
   </div>
 </section>
 
 <style lang="scss">
-  .experiment {
-    position: relative;
-    background-color: #F5F7FA;
+  .mw {
+    max-width: 800px;
+    margin: 1rem auto;
+    text-align: center;
+  }
 
-    .bg-image {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      opacity: 0;
-      transition: all 0.3s;
-
-      &:after {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background-color: rgba(0, 0, 0, 0.4);
-      }
-
-      img {
-        height: 100%;
-        object-fit: cover;
-      }
-    }
-
-    .description {
-      opacity: 0;
-    }
-
-    &:hover .bg-image {
-      opacity: 1;
-    }
-
-    &:hover h3 a {
-      color: white;
-    }
-
-    &:hover .description {
-      opacity: 1;
-      color: white;
-    }
-
-    h3 a {
-      color: #1D1D1D;
-      text-decoration: none;
-    }
-
-    .content {
-      position: relative;
-    }
+  .catsNav {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
   }
 
   .cards {
@@ -126,13 +76,19 @@
     margin-top: 3rem;
 
     .card {
-      border-radius: 12px;
-      overflow: hidden;
-      min-height: 500px;
+      position: relative;
+      min-height: 494px;
+      border-radius: 35px;
       background: var(--cLightSection);
+      overflow: hidden;
+      transition: all 0.3s;
+
+      &:hover, &:focus-within {
+        box-shadow: var(--focusShadow)
+      }
 
       .head {
-        aspect-ratio: 16/9;
+        aspect-ratio: 9/9;
 
         img {
           display: block;
@@ -144,10 +100,31 @@
       .content {
         padding: 0.5rem;
       }
-    }
 
-    a {
-      display: block;
+      a {
+        text-decoration: none;
+        color: var(--cBlack);
+        display: block;
+        text-align: center;
+        margin: 1rem 0.5rem;
+
+        &:after {
+          content: '';
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+        }
+      }
     }
+  }
+  .categories {
+    display: flex;
+    position: absolute;
+    bottom: 4px;
+    right: 2rem;
+    font-size: 11px;
+    gap: 4px;
   }
 </style>

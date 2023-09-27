@@ -1,9 +1,9 @@
 ---
-title: Fourth post here
+title: State of the Art Digital Workplace
 description: Fourth post.
 date: '2023-07-04'
 published: true
-image: 'card-demo4.jpg'
+image: 'Project_1A.jpg'
 categories:
 - capitalMarkets
 - banking  

@@ -122,7 +122,7 @@
   }
 
   .nav a {
-    background: linear-gradient(90deg, var(--cCrimson) 0%, var(--cOrange) 100%);
+    background: var(--bgGradient);
     background-size: cover;
     -webkit-background-clip: text;
     background-clip: text;
@@ -130,7 +130,7 @@
   }
 
   .nav a:hover {
-    background: linear-gradient(90deg, var(--cOrange) 0%, var(--cOrange) 100%);
+    background: var(--bgGradient);
     background-size: cover;
     -webkit-background-clip: text;
     background-clip: text;

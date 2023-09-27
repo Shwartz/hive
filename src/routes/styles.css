@@ -121,6 +121,8 @@ SITE UTILS
     --cCrimson: #CE0569;
     --cPrimary: #333;
     --cBlack: #1D1D1D;
+    --bgGradient: linear-gradient(90deg, var(--cCrimson) 0%, var(--cOrange) 100%);
+    --focusShadow: 0 0 2px rgba(0,0,0,0.8);
 }
 @font-face {
     font-family: 'Segoe UI Bold';
@@ -222,9 +224,25 @@ a:hover {
     color: var(--cDarkOrange);
 }
 
+.btn {
+    padding: 4px 8px;
+    border-radius: 4px;
+    color: var(--cWhite);
+    background: var(--cCrimson);
+    cursor: pointer;
+}
+
+.btn[aria-current="true"] {
+    background: var(--bgGradient);
+}
+
+.btn:focus {
+    box-shadow: var(--focusShadow)
+}
+
 .brandTitle {
     margin-top: 2rem;
-    background: linear-gradient(90deg, var(--cCrimson) 0%, var(--cOrange) 100%);
+    background: var(--bgGradient);
     background-size: cover;
     -webkit-background-clip: text;
     background-clip: text;
