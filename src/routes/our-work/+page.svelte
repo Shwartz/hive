@@ -62,11 +62,12 @@
   .catsNav {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 12px;
   }
 
   .cards {
-    --min: 29ch;
+    --min: 35ch;
     --gap: 1rem;
 
     display: grid;
@@ -76,19 +77,22 @@
     margin-top: 3rem;
 
     .card {
+      display: flex;
+      flex-direction: column;
       position: relative;
       min-height: 494px;
-      border-radius: 35px;
+      border-radius: 30px;
       background: var(--cLightSection);
       overflow: hidden;
-      transition: all 0.3s;
+      box-shadow: 0 0 2px rgba(0,0,0,0);
+      transition: all 0.2s;
 
       &:hover, &:focus-within {
         box-shadow: var(--focusShadow)
       }
 
       .head {
-        aspect-ratio: 9/9;
+        flex-grow: 1;
 
         img {
           display: block;
@@ -98,7 +102,10 @@
       }
 
       .content {
-        padding: 0.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 128px;
       }
 
       a {
@@ -107,6 +114,7 @@
         display: block;
         text-align: center;
         margin: 1rem 0.5rem;
+        font-weight: 700;
 
         &:after {
           content: '';

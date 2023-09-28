@@ -1,11 +1,11 @@
 ---
-title: Second
-description: Second post.
-date: '2023-07-02'
+title: Internal Digital Brand Creation
+description: Third post.
+date: '2023-07-03'
 published: true
-image: 'card-demo2.jpg'
+image: 'image-36.jpg'
 categories:
-- health
+- insurance
 ---
 <script>
     import { base } from "$app/paths";

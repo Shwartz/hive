@@ -1,9 +1,9 @@
 ---
-title: Digital banking solutions  
+title: Data Visualisation PoC  
 description: Innovative digital banking for today’s urgent challenges  
 date: '2023-07-01'  
 published: true
-image: 'card-demo1.jpg'
+image: 'image-38.jpg'
 categories:
 - energy
 ---

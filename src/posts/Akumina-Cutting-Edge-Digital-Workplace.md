@@ -1,11 +1,11 @@
 ---
-title: Third
-description: Third post.
-date: '2023-07-03'
+title: Akumina Cutting Edge Digital Workplace
+description: Second post.
+date: '2023-07-02'
 published: true
-image: 'card-demo3.jpg'
+image: 'image-37.jpg'
 categories:
-- insurance
+- health
 ---
 <script>
     import { base } from "$app/paths";
