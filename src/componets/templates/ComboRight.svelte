@@ -1,11 +1,11 @@
 <section class="large">
-  <div class="comboLeft">
+  <div class="comboRight">
     <slot />
   </div>
 </section>
 
 <style lang="scss">
-  .comboLeft {
+  .comboRight {
     position: relative;
 
     display: grid;
@@ -51,7 +51,8 @@
       }
 
       :global(.textBox) {
-        grid-area: 2 / 1 / 4 / 6;
+        grid-area: 2 / 2 / 4 / 7;
+        margin-left: auto;
         :global(> div) {
           border-radius: 30px;
         }
@@ -60,14 +61,14 @@
 
     @media (min-width: 900px) {
       :global(.textBox) {
-        grid-area: 2 / 2 / 4 / 5;
+        grid-area: 2 / 3 / 4 / 6;
         border-radius: 30px;
       }
     }
 
     @media (min-width: 1150px) {
       :global(.textBox) {
-        grid-area: 2 / 2 / 4 / 4;
+        grid-area: 2 / 4 / 4 / 6;
         border-radius: 30px;
       }
     }
