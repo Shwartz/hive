@@ -1,5 +1,6 @@
 <script>
   import { formatDate } from "$lib/utils";
+  import { base } from "$app/paths";
   export let data;
 </script>
 
@@ -11,9 +12,11 @@
 
 <section class="large">
   <div>
-    <hgroup>
-      <h1>{data.meta.title}</h1>
-      <p>Published at {formatDate(data.meta.date)}</p>
+    <a href="{base}/our-work">Back to Our Work</a>
+    <hgroup class="postHead">
+      <h1 class="brandTitle center">{data.meta.title}</h1>
+      <!--<p>Published at {formatDate(data.meta.date)}</p>-->
+      <p>{data.meta.description}</p>
     </hgroup>
 
     <div class="tags">
@@ -29,5 +32,11 @@
 </section>
 
 <style>
-
+  .tags {
+      display: flex;
+      justify-content: end;
+      gap: 8px;
+      margin-top: 1rem;
+      font-size: 11px;
+  }
 </style>

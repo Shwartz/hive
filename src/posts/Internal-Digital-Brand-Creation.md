@@ -3,7 +3,7 @@ title: Internal Digital Brand Creation
 description: Third post.
 date: '2023-07-03'
 published: true
-image: 'image-36.jpg'
+heroImg: 'image-36.jpg'
 categories:
 - insurance
 ---

@@ -251,6 +251,12 @@ a:hover {
     font-family: var(--font-bold);
 }
 
+.postHead {
+    max-width: 800px;
+    margin: 1rem auto;
+    text-align: center;
+}
+
 /**
 ANIMATION
 */

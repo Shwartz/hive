@@ -3,7 +3,7 @@ title: Data Visualisation PoC
 description: Innovative digital banking for today’s urgent challenges  
 date: '2023-07-01'  
 published: true
-image: 'image-38.jpg'
+heroImg: 'image-38.jpg'
 categories:
 - energy
 ---

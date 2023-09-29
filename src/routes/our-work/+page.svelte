@@ -18,10 +18,14 @@
 
 <section class="large">
   <div>
-    <h1 class="brandTitle center">Our work</h1>
-    <p class="mw">Lorem ipsum dolor sit amet consectetur. Scelerisque ac ultricies volutpat a massa vel lectus nulla.
-      Augue
-      ultricies nisl gravida consequat adipiscing etiam amet. Mauris nec tortor justo aenean quam senectus.</p>
+    <a href="{base}/">Back Home</a>
+    <div class="postHead">
+      <h1 class="brandTitle center">Our work</h1>
+      <p>Lorem ipsum dolor sit amet consectetur. Scelerisque ac ultricies volutpat a massa vel lectus nulla.
+        Augue
+        ultricies nisl gravida consequat adipiscing etiam amet. Mauris nec tortor justo aenean quam senectus.</p>
+    </div>
+
 
     <div class="catsNav">
       <button aria-current="{currentTag === 'all'}" class="btn" type="button" on:click={() => handleTag('all')}>All
@@ -36,7 +40,7 @@
       {#each filteredPosts as post}
         <div class="card">
           <div class="head">
-            <img src="{base}/images/{post.image}" alt={post.title}>
+            <img src="{base}/images/{post.heroImg}" alt={post.title}>
           </div>
           <div class="content">
             <h3><a href="{base}/our-work/{post.slug}" class="title">{post.title}</a></h3>
@@ -53,12 +57,6 @@
 </section>
 
 <style lang="scss">
-  .mw {
-    max-width: 800px;
-    margin: 1rem auto;
-    text-align: center;
-  }
-
   .catsNav {
     display: flex;
     justify-content: center;
@@ -86,6 +84,7 @@
       overflow: hidden;
       box-shadow: 0 0 2px rgba(0,0,0,0);
       transition: all 0.2s;
+      max-width: 500px;
 
       &:hover, &:focus-within {
         box-shadow: var(--focusShadow)

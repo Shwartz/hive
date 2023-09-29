@@ -3,7 +3,7 @@ title: Akumina Cutting Edge Digital Workplace
 description: Second post.
 date: '2023-07-02'
 published: true
-image: 'image-37.jpg'
+heroImg: 'image-37.jpg'
 categories:
 - health
 ---
