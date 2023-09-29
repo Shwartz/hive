@@ -20,7 +20,7 @@
   <div>
     <a href="{base}/">Back Home</a>
     <div class="postHead">
-      <h1 class="brandTitle center">Our work</h1>
+      <h1 class="center"><span class="brandTitle">Our work</span></h1>
       <p>Lorem ipsum dolor sit amet consectetur. Scelerisque ac ultricies volutpat a massa vel lectus nulla.
         Augue
         ultricies nisl gravida consequat adipiscing etiam amet. Mauris nec tortor justo aenean quam senectus.</p>

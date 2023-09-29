@@ -241,6 +241,7 @@ a:hover {
 }
 
 .brandTitle {
+    display: inline-block;
     margin-top: 2rem;
     background: var(--bgGradient);
     background-size: cover;

@@ -5,7 +5,7 @@
 <section id="ourWork" class="large dark mHeight">
   <div class="wrap">
     <div class="text">
-      <h2 class="brandTitle">Our Work</h2>
+      <h2><span class="brandTitle">Our Work</span></h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua.</p>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
