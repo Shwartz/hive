@@ -4,7 +4,8 @@
   export let data;
   export let currentTag = "all";
   const handleTag = (tag) => currentTag = tag;
-  const categories = data.posts.map((post) => post.categories).flat();
+  const allCategories = data.posts.map((post) => post.categories).flat();
+  const categories = allCategories.filter((tag, i) => allCategories.indexOf(tag) === i);
 
   $: filteredPosts = currentTag === "all"
     ? data.posts

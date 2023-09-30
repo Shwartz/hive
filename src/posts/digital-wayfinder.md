@@ -1,9 +1,9 @@
 ---
-title: State of the Art Digital Workplace
-description: Lorem ipsum dolor sit amet consectetur. Scelerisque ac ultricies volutpat a massa vel lectus nulla. Augue ultricies nisl gravida consequat adipiscing etiam amet. Mauris nec tortor justo aenean quam senectus.
-date: '2023-07-04'
+title: Digital WayFinder
+description: Digital Wayfinder. Scelerisque ac ultricies volutpat a massa vel lectus nulla. Augue ultricies nisl gravida consequat adipiscing etiam amet. Mauris nec tortor justo aenean quam senectus.
+date: '2023-07-01'
 published: true
-heroImg: 'Project_1A.jpg'
+heroImg: 'image-40.jpg'
 categories:
 - capitalMarkets
 - banking
