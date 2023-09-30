@@ -20,6 +20,7 @@
 
     :global(.brandTitle) {
       font-size: 2rem;
+      margin-top: 0;
     }
 
     :global(p) {
