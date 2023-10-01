@@ -5,8 +5,7 @@ date: '2023-07-01'
 published: true
 heroImg: 'image-40.jpg'
 categories:
-- capitalMarkets
-- banking
+- insurance
 ---
 
 <script>

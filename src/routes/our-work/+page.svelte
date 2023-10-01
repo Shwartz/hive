@@ -53,6 +53,8 @@
           </div>
         </div>
       {/each}
+      <div></div>
+      <div></div>
     </div>
   </div>
 </section>
@@ -85,7 +87,7 @@
       overflow: hidden;
       box-shadow: 0 0 2px rgba(0,0,0,0);
       transition: all 0.2s;
-      max-width: 500px;
+      /*max-width: 500px;*/
 
       &:hover, &:focus-within {
         box-shadow: var(--focusShadow)
