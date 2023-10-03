@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg class="svg" id="exPVnD9AMkp1" viewBox="0 0 200 35" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FF5800" />
+      <stop offset="100%" stop-color="#CE0569" />
+    </linearGradient>
+  </defs>
+  <path class="pathGradient" d="M -0.266 17.208 C -0.266 17.208 16.279 10.066 23.813 10.066 C 38.026 10.066 49.15 19.61 60.057 23.568 C 89.43 34.228 115.013 17.208 115.013 17.208 C 115.013 17.208 132.032 5.096 140.597 4.144 C 146.993 3.433 152.22 6.557 155.52 10.066 C 171.155 26.689 170.444 39.676 181.814 25.226 C 187.65 17.811 199.735 17.208 199.735 17.208" fill="none" stroke="url(#gradient)" stroke-width="5" stroke-linecap="round" stroke-dasharray="0"/>
+  <path class="pathBg" d="M -0.266 17.208 C -0.266 17.208 16.279 10.066 23.813 10.066 C 38.026 10.066 49.15 19.61 60.057 23.568 C 89.43 34.228 115.013 17.208 115.013 17.208 C 115.013 17.208 132.032 5.096 140.597 4.144 C 146.993 3.433 152.22 6.557 155.52 10.066 C 171.155 26.689 170.444 39.676 181.814 25.226 C 187.65 17.811 199.735 17.208 199.735 17.208" fill="none" stroke="#f2f2f2" stroke-width="5" stroke-linecap="square" stroke-dasharray="0"/>
+</svg>
