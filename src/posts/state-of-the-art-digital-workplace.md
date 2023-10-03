@@ -14,6 +14,7 @@ categories:
     import ComboLeft from "../componets/templates/ComboLeft.svelte";
     import ComboRight from "../componets/templates/ComboRight.svelte";
     import TwoCols from "../componets/templates/TwoCols.svelte";
+    import Divider from "../componets/templates/Divider.svelte";
 </script>
 
 <ComboRight>
@@ -28,6 +29,8 @@ categories:
     </div>
 </div>
 </ComboRight>
+
+<Divider/>
 
 <ComboLeft>
 <div class="image">
@@ -59,6 +62,8 @@ categories:
       consequat. Duis aute irure dolor in reprehenderit in volutate.</p>
 </div>
 </TwoCols>
+
+<Divider/>
 
 <TwoCols direction="" title="Intelligent Search (img Left)">
 <div>
