@@ -43,6 +43,7 @@
         max-width: 440px;
         padding: 2rem;
         background: var(--cLightSection);
+        height: 100%;
       }
     }
 
