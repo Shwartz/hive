@@ -1,4 +1,4 @@
-import{s as y,n as p}from"./scheduler.c6aca17a.js";import{S as b,i as C,g as c,s as h,h as d,B as m,c as v,a as o,f as s}from"./index.45b47640.js";function k(x){let e,u="Do What Matters",l,a,g=`In an uncertain environment, banks are being asked not only to successfully manage customer demand and put their people
+import{s as y,n as p}from"./scheduler.c6aca17a.js";import{S as b,i as C,g as c,s as h,h as d,B as m,c as v,a as o,f as s}from"./index.d11fb334.js";function k(x){let e,u="Do What Matters",l,a,g=`In an uncertain environment, banks are being asked not only to successfully manage customer demand and put their people
 first but develop an agile and resilient operational model to allow them to adapt quickly to market changes.
 Cybersecurity is a CEO topic and banks need to rethink how they manage risk, compliance and complexity. Sustainability
 and climate risk management is not an optional extra: banks are under pressure to increase reporting transparency,
