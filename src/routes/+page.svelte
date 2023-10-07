@@ -1,4 +1,5 @@
 <script>
+  import {browser} from "$app/environment";
   import { fly } from "svelte/transition";
   import { backOut } from "svelte/easing";
   import { onMount } from "svelte";
@@ -12,11 +13,48 @@
 
   let animate = false;
   const words = ["We Are", "Avanade X"];
+  let box0, box1, box2, box3, box4, box5, box6;
+  let elBox0 = {}
+  let elBox1 = {}
+  let elBox2 = {}
+  let elBox3 = {}
+  let elBox4 = {}
+  let elBox5 = {}
+  let elBox6 = {}
 
   onMount(() => {
     animate = true;
+    onScrollCalculation();
   });
+
+  box1 = (el) => elBox1.el = el;
+  box2 = (el) => elBox2.el = el;
+  box3 = (el) => elBox3.el = el;
+  box4 = (el) => elBox4.el = el;
+  box5 = (el) => elBox5.el = el;
+  box6 = (el) => elBox6.el = el;
+  const onScrollCalculation = () => {
+    elBox0.rect = box0.getBoundingClientRect();
+    elBox1.rect = elBox1.el.getBoundingClientRect();
+    elBox2.rect = elBox2.el.getBoundingClientRect();
+    elBox3.rect = elBox3.el.getBoundingClientRect();
+    elBox4.rect = elBox4.el.getBoundingClientRect();
+    elBox5.rect = elBox5.el.getBoundingClientRect();
+    elBox6.rect = elBox6.el.getBoundingClientRect();
+  }
+
+  const isCurrentNavItem = (el) => {
+    if (!browser) return;
+
+    if (el) {
+      const top = el.top + document.body.scrollTop;
+      const bottom = el.bottom + document.body.scrollTop;
+      return top < 86 && bottom > 86 ? 'current' : '';
+    }
+  }
 </script>
+
+<svelte:window on:scroll={onScrollCalculation}/>
 
 <svelte:head>
   <title>Home - Ava Portfolio</title>
@@ -27,7 +65,7 @@
     <a href="{base}/">Avas Logo</a>
   </div>
 </div>
-<div id="avanadeX" class="hero">
+<div id="avanadeX" class="hero" bind:this={box0}>
   <div class="content">
     <h1>
       {#if animate}
@@ -50,22 +88,22 @@
 </div>
 <section class="large sticky">
   <ul class="nav">
-    <li><a href="#avanadeX">Avanade X</a></li>
-    <li><a href="#whatIsAvanade">What is Avanade X?</a></li>
-    <li><a href="#ourWork">Our Work</a></li>
-    <li><a href="#testimonials">Testimonials</a></li>
-    <li><a href="#whatElse">What Else?</a></li>
-    <li><a href="#ourStars">Our Stars</a></li>
-    <li><a href="#contactUs">Contact Us</a></li>
+    <li><a class="{isCurrentNavItem(elBox0.rect)}" href="#avanadeX">Avanade X</a></li>
+    <li><a class="{isCurrentNavItem(elBox1.rect)}" href="#whatIsAvanade">What is Avanade X?</a></li>
+    <li><a class="{isCurrentNavItem(elBox2.rect)}" href="#ourWork">Our Work</a></li>
+    <li><a class="{isCurrentNavItem(elBox3.rect)}" href="#testimonials">Testimonials</a></li>
+    <li><a class="{isCurrentNavItem(elBox4.rect)}" href="#whatElse">What Else?</a></li>
+    <li><a class="{isCurrentNavItem(elBox5.rect)}" href="#ourStars">Our Stars</a></li>
+    <li><a class="{isCurrentNavItem(elBox6.rect)}" href="#contactUs">Contact Us</a></li>
   </ul>
 </section>
 
-<WhatIsAvanade />
-<OurWork />
-<Testimonials />
-<WhatElse />
-<OurStars />
-<ContactUs />
+<WhatIsAvanade box={box1} />
+<OurWork box={box2} />
+<Testimonials box={box3} />
+<WhatElse box={box4}/>
+<OurStars box={box5}/>
+<ContactUs box={box6}/>
 
 <style lang="scss">
   .nav-placeholder {
@@ -136,4 +174,9 @@
     background-clip: text;
     color: transparent;
   }
+
+  .nav a.current {
+    color: brown;
+  }
 </style>
+// https://svelte.dev/repl/3d3736e634c9404ea8ec2ef7b87e2053?version=3.42.4

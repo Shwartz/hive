@@ -1,8 +1,15 @@
 <script>
   import { base } from "$app/paths";
+  import { onMount } from "svelte";
+
+  export let box;
+  let container;
+  onMount(() => {
+    box(container);
+  })
 </script>
 
-<section id="ourWork" class="large dark mHeight">
+<section id="ourWork" class="large dark mHeight" bind:this={container}>
   <div class="wrap">
     <div class="text">
       <h2><span class="brandTitle">Our Work</span></h2>

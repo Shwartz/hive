@@ -1,4 +1,14 @@
-<section id="whatElse" class="large dark mHeight">
+<script>
+  import { onMount } from "svelte";
+
+  export let box;
+  let container;
+  onMount(() => {
+    box(container);
+  })
+</script>
+
+<section id="whatElse" class="large dark mHeight" bind:this={container}>
   <div class="wrap">
     <div class="text">
       <h2><span class="brandTitle">What Else?</span></h2>

@@ -1,4 +1,14 @@
-<section id="ourStars" class="large light mHeight">
+<script>
+  import { onMount } from "svelte";
+
+  export let box;
+  let container;
+  onMount(() => {
+    box(container);
+  })
+</script>
+
+<section id="ourStars" class="large light mHeight" bind:this={container}>
   <div class="flex">
     <h2 class="center"><span class="brandTitle">Our Stars</span></h2>
     <div class="smol-flexbox-grid">

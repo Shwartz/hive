@@ -1,5 +1,5 @@
 <script>
-  import { formatDate } from "$lib/utils";
+  /*import { formatDate } from "$lib/utils";*/
   import { base } from "$app/paths";
   export let data;
 </script>

@@ -1,4 +1,14 @@
-<section id="contactUs" class="large dark mHeight">
+<script>
+  import { onMount } from "svelte";
+
+  export let box;
+  let container;
+  onMount(() => {
+    box(container);
+  })
+</script>
+
+<section id="contactUs" class="large dark mHeight" bind:this={container}>
   <div class="wrap">
     <div class="text">
       <h2><span class="brandTitle">Contact Us</span></h2>
@@ -11,6 +21,7 @@
 
 <style lang="scss">
   section {
+    min-height: 100vh;
     .wrap {
       display: flex;
       align-items: center;

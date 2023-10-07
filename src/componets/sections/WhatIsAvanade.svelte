@@ -1,7 +1,15 @@
 <script>
   import { base } from "$app/paths";
+  import { onMount } from "svelte";
+
+  export let box;
+  let container;
+  onMount(() => {
+    box(container);
+  })
 </script>
-<section id="whatIsAvanade" class="large light mHeight">
+
+<section id="whatIsAvanade" class="large light mHeight" bind:this={container}>
   <div>
     <h2 class="center"><span class="brandTitle">What is Avanade X?</span></h2>
     <div class="smol-flexbox-grid">
