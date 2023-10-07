@@ -8,7 +8,7 @@
   })
 </script>
 
-<section id="contactUs" class="large dark mHeight" bind:this={container}>
+<section id="contactUs" class="large white mHeight" bind:this={container}>
   <div class="wrap">
     <div class="text">
       <h2><span class="brandTitle">Contact Us</span></h2>
