@@ -8,7 +8,7 @@
   })
 </script>
 
-<section id="whatElse" class="large dark mHeight" bind:this={container}>
+<section id="whatElse" class="large white mHeight" bind:this={container}>
   <div class="wrap">
     <div class="text">
       <h2><span class="brandTitle">What Else?</span></h2>
@@ -21,10 +21,28 @@
 
 <style lang="scss">
   section {
+
+    @media (min-width: 800px) {
+      background: url('/images/phones.png') no-repeat 210% 100%;
+      background-size: 80%;
+    }
+
+    @media (min-width: 1000px) {
+      background: url('/images/phones.png') no-repeat 105% 100%;
+      background-size: 70%;
+    }
+
+    @media (min-width: 1300px) {
+      background: url('/images/phones.png') no-repeat 100% 100%;
+      background-size: 800px;
+    }
+
     .wrap {
       display: flex;
       align-items: center;
       width: 100%;
+
+
     }
 
     .text {
