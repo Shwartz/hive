@@ -62,7 +62,9 @@
 </svelte:head>
 <div class="nav-placeholder">
   <div>
-    <a href="{base}/">Avas Logo</a>
+    <a href="{base}/">
+      <img src="{base}/images/avanade-logo-color.svg" alt="Avanade Logo">
+    </a>
   </div>
 </div>
 <div id="avanadeX" class="hero" bind:this={box0}>
