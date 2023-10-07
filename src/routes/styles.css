@@ -244,6 +244,37 @@ a:hover {
     box-shadow: var(--focusShadow)
 }
 
+.btn-back {
+    padding: 0.5rem 1rem 0.5rem 2rem;
+    border: 1px solid var(--cBlack);
+    border-radius: 1rem;
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: var(--cBlack);
+    background: url(/images/icn-shevron-left.svg) no-repeat 16px 55%;
+    transition: background-position 300ms;
+}
+
+.btn-back:hover {
+    color: var(--cBlack);
+    background-position: 12px 52%;
+}
+
+.btn-forward {
+    padding: 0.5rem 2rem 0.5rem 0rem;
+    font-weight: 900;
+    text-decoration: none;
+    color: var(--cBlack);
+    background: url(/images/icn-arrow-right.svg) no-repeat 95% 60%;
+    font-family: var(--font-bold);
+    transition: background-position 300ms;
+}
+
+.btn-forward:hover {
+    color: var(--cBlack);
+    background-position: 100% 60%;
+}
+
 .brandTitle {
     display: inline-block;
     margin-top: 2rem;

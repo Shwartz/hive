@@ -57,7 +57,10 @@
 
   .nav-placeholder {
     padding: 8px;
-    background: var(--cLightSection);
+    background: var(--cWhite);
+    margin-bottom: 24px;
+    box-shadow: 0 1px 12px rgba(0,0,0,0.2);
+    border-bottom: 0.5px solid white;
 
     > div {
       display: flex;

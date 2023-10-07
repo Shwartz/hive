@@ -12,7 +12,7 @@
 
 <section class="large">
   <div>
-    <a href="{base}/our-work">Back to Our Work</a>
+    <a class="btn-back" href="{base}/our-work">Back to Our Work</a>
     <hgroup class="postHead">
       <h1 class="brandTitle center">{data.meta.title}</h1>
       <!--<p>Published at {formatDate(data.meta.date)}</p>-->

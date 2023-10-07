@@ -17,7 +17,7 @@
         magna aliqua.</p>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua.</p>
-      <a href="{base}/our-work">See our work</a>
+      <a class="btn-forward" href="{base}/our-work">See our work</a>
     </div>
   </div>
 </section>

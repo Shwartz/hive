@@ -19,7 +19,7 @@
 
 <section class="large">
   <div>
-    <a href="{base}/">Back Home</a>
+    <a class="btn-back" href="{base}/">Back Home</a>
     <div class="postHead">
       <h1 class="center"><span class="brandTitle">Our work</span></h1>
       <p>Lorem ipsum dolor sit amet consectetur. Scelerisque ac ultricies volutpat a massa vel lectus nulla.

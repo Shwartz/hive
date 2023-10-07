@@ -1,5 +1,6 @@
 <script>
   import { onMount } from "svelte";
+  import { base } from "$app/paths";
 
   export let box;
   let container;
@@ -14,7 +15,7 @@
       <h2><span class="brandTitle">Contact Us</span></h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua.</p>
-      <a href="#">See our work</a>
+      <a class="btn-forward" href="{base}/our-work">See our work</a>
     </div>
   </div>
 </section>
