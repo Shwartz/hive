@@ -1,4 +1,5 @@
 <script>
+  import { base } from "$app/paths";
   import { onMount } from "svelte";
 
   export let box;
@@ -14,7 +15,7 @@
       <h2><span class="brandTitle">What Else?</span></h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua.</p>
-      <a href="#">See our work</a>
+      <a href="{base}/our-work">See our work</a>
     </div>
   </div>
 </section>

@@ -1,4 +1,5 @@
 <script>
+  import { base } from "$app/paths";
   import "./styles.css";
   import { fly } from "svelte/transition";
 
@@ -7,10 +8,17 @@
 
 <div class="app">
   <main>
+    <div class="nav-placeholder">
+      <div>
+        <a href="{base}/">
+          <img src="{base}/images/avanade-logo-color.svg" alt="Avanade Logo">
+        </a>
+      </div>
+    </div>
     {#key data.url}
       <div
-        in:fly={{ y: -200, duration: 300, delay: 300 }}
-        out:fly={{ y: 200, duration: 300 }}
+        in:fly={{ x: 200, duration: 300, delay: 300 }}
+        out:fly={{ x: -200, duration: 300 }}
       >
         <slot />
       </div>
@@ -44,6 +52,21 @@
     & :global(> *) {
       flex: 1 1 var(--min);
       text-align: center;
+    }
+  }
+
+  .nav-placeholder {
+    padding: 8px;
+    background: var(--cLightSection);
+
+    > div {
+      display: flex;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    a {
+      padding: 8px;
     }
   }
 </style>

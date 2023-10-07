@@ -3,7 +3,6 @@
   import { fly } from "svelte/transition";
   import { backOut } from "svelte/easing";
   import { onMount } from "svelte";
-  import { base } from "$app/paths";
   import WhatIsAvanade from "../componets/sections/WhatIsAvanade.svelte";
   import OurWork from "../componets/sections/OurWork.svelte";
   import Testimonials from "../componets/sections/Testimonials.svelte";
@@ -60,13 +59,6 @@
   <title>Home - Ava Portfolio</title>
   <meta name="description" content="Portfolio">
 </svelte:head>
-<div class="nav-placeholder">
-  <div>
-    <a href="{base}/">
-      <img src="{base}/images/avanade-logo-color.svg" alt="Avanade Logo">
-    </a>
-  </div>
-</div>
 <div id="avanadeX" class="hero" bind:this={box0}>
   <div class="content">
     <h1>
@@ -108,21 +100,6 @@
 <ContactUs box={box6}/>
 
 <style lang="scss">
-  .nav-placeholder {
-    padding: 8px;
-    background: var(--cLightSection);
-
-    > div {
-      display: flex;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    a {
-      padding: 8px;
-    }
-  }
-
   .hero {
     display: flex;
     height: 780px;

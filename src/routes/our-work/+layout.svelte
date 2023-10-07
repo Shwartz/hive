@@ -1,19 +1,4 @@
-<script>
-  import { base } from "$app/paths";
-</script>
-
 <div class="our-work">
-  <nav>
-    <ul>
-      <li><a href="{base}/">Avanade</a></li>
-      <li><a href="#">Industries</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">Insights</a></li>
-      <li><a href="#">Careers</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact Us</a></li>
-    </ul>
-  </nav>
   <slot/>
 </div>
 
