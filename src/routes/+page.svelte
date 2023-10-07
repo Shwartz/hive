@@ -160,11 +160,8 @@
   }
 
   .nav a {
-    background: var(--bgGradient);
-    background-size: cover;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    color: var(--cBlack);
+    text-decoration: none;
   }
 
   .nav a:hover {
@@ -176,7 +173,11 @@
   }
 
   .nav a.current {
-    color: brown;
+    background: var(--bgGradient);
+    background-size: cover;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
   }
 </style>
 // https://svelte.dev/repl/3d3736e634c9404ea8ec2ef7b87e2053?version=3.42.4
