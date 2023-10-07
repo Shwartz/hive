@@ -105,6 +105,7 @@
     height: 780px;
     justify-content: center;
     align-items: center;
+    margin-top: -24px;
     background: url('/images/hero_bg-2.jpg') center no-repeat;
     background-size: cover;
 
@@ -143,7 +144,7 @@
     text-decoration: none;
   }
 
-  .nav a:hover {
+  .nav a:hover, .nav a:focus {
     background: var(--bgGradient);
     background-size: cover;
     -webkit-background-clip: text;

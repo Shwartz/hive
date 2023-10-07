@@ -255,7 +255,7 @@ a:hover {
     transition: background-position 300ms;
 }
 
-.btn-back:hover {
+.btn-back:hover, .btn-back:focus {
     color: var(--cBlack);
     background-position: 12px 52%;
 }
@@ -277,7 +277,7 @@ a:hover {
 
 .brandTitle {
     display: inline-block;
-    margin-top: 2rem;
+    /*margin-top: 2rem;*/
     background: var(--bgGradient);
     background-size: cover;
     -webkit-background-clip: text;

@@ -24,26 +24,25 @@
 
 <style lang="scss">
   section {
+    @media (min-width: 800px) {
+      background: url('/images/ipad2-big.png') no-repeat 100% 100%;
+      background-size: 50%;
+    }
+
+    @media (min-width: 1000px) {
+      background-position-x: 110%;
+      background-size: 60%;
+    }
+
+    @media (min-width: 1300px) {
+      background-position-x: 100%;
+      background-size: auto;
+    }
+
     .wrap {
       display: flex;
       align-items: center;
       width: 100%;
-
-
-      @media (min-width: 800px) {
-        background: url('/images/ipad2-big.png') no-repeat 100% 100%;
-        background-size: 50%;
-      }
-
-      @media (min-width: 1000px) {
-        background-position-x: 110%;
-        background-size: 60%;
-      }
-
-      @media (min-width: 1300px) {
-        background-position-x: 120%;
-        background-size: auto;
-      }
     }
 
     .text {

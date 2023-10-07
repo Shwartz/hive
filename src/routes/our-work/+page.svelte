@@ -22,11 +22,9 @@
     <a class="btn-back" href="{base}/">Back Home</a>
     <div class="postHead">
       <h1 class="center"><span class="brandTitle">Our work</span></h1>
-      <p>Lorem ipsum dolor sit amet consectetur. Scelerisque ac ultricies volutpat a massa vel lectus nulla.
-        Augue
+      <p>Lorem ipsum dolor sit amet consectetur. Scelerisque ac ultricies volutpat a massa vel lectus nulla. Augue
         ultricies nisl gravida consequat adipiscing etiam amet. Mauris nec tortor justo aenean quam senectus.</p>
     </div>
-
 
     <div class="catsNav">
       <button aria-current="{currentTag === 'all'}" class="btn" type="button" on:click={() => handleTag('all')}>All
@@ -60,6 +58,9 @@
 </section>
 
 <style lang="scss">
+  .postHead p {
+    margin: 2rem 0 4rem;
+  }
   .catsNav {
     display: flex;
     justify-content: center;
@@ -85,7 +86,7 @@
       border-radius: 30px;
       background: var(--cLightSection);
       overflow: hidden;
-      box-shadow: 0 0 2px rgba(0,0,0,0);
+      box-shadow: 0 0 2px rgba(0, 0, 0, 0);
       transition: all 0.2s;
       /*max-width: 500px;*/
 
@@ -129,6 +130,7 @@
       }
     }
   }
+
   .categories {
     display: flex;
     position: absolute;

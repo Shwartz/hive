@@ -40,6 +40,10 @@
     font-size: clamp(1rem, 4vw + 1rem, 2rem);
   }
 
+  h2 {
+    margin-top: 3rem;
+  }
+
   img {
     display: block;
     width: 80%;
