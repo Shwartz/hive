@@ -11,7 +11,7 @@
   import ContactUs from "../componets/sections/ContactUs.svelte";
 
   let animate = false;
-  const words = ["We Are", "Avanade X"];
+  const words = ["We Are", "Avanade X", "London"];
   let box0, box1, box2, box3, box4, box5, box6;
   let elBox0 = {}
   let elBox1 = {}

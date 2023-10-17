@@ -261,7 +261,7 @@ a:hover {
 }
 
 .btn-forward {
-    padding: 0.5rem 2rem 0.5rem 0rem;
+    padding: 0.5rem 2rem 0.5rem 0;
     font-weight: 900;
     text-decoration: none;
     color: var(--cBlack);
@@ -273,6 +273,16 @@ a:hover {
 .btn-forward:hover {
     color: var(--cBlack);
     background-position: 100% 60%;
+}
+
+.btn-black {
+    padding: 0.5rem 1rem;
+    font-weight: 900;
+    font-size: 14px;
+    border-radius: 1rem;
+    text-decoration: none;
+    color: var(--cWhite);
+    background: var(--cBlack);
 }
 
 .brandTitle {
