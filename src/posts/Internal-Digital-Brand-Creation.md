@@ -12,6 +12,9 @@ categories:
     import ComboLeft from "../componets/templates/ComboLeft.svelte";
     import ComboRight from "../componets/templates/ComboRight.svelte";
     import TwoCols from "../componets/templates/TwoCols.svelte";
+    import Divider from "../componets/templates/Divider.svelte";
+    import Numbers from "../componets/sections/Numbers.svelte";
+    import LikeWhatYouSee from "../componets/sections/LikeWhatYouSee.svelte";
 </script>
 
 <TwoCols direction="" title="Intelligent Search (img Left)">
@@ -50,6 +53,10 @@ categories:
 </div>
 </TwoCols>
 
+<Divider/>
+
+<Numbers/>
+
 <ComboLeft>
 <div class="image">
     <img src="{base}/images/Project_1A-long.jpg" alt="some alt"/>
@@ -75,3 +82,18 @@ categories:
     </div>
 </div>
 </ComboRight>
+
+<LikeWhatYouSee/>
+
+-------+-------+-------+-------+-------+-------+
+
+You won't believe what happened next!  
+Guess what!?!
+
+You can use simple markdown to fill this page :)
+
+# h1 Title using markdown
+## h2 Title using markdown
+### h3 Title using markdown
+
+This is simple paragraph

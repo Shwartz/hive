@@ -1,7 +1,5 @@
 <script>
   import lineDecoded from "/src/assets/line.svg?src";
-
-
 </script>
 
 <div class="line">
@@ -11,6 +9,7 @@
 <style lang="scss">
   .line {
     text-align: center;
+    margin: 4rem 0;
   }
 
   :global(.svg) {
@@ -21,7 +20,7 @@
     stroke-dasharray: 500;
     stroke-dashoffset: 1000;
     animation: dash 10s linear forwards;
-    animation-iteration-count: 3;
+    animation-iteration-count: infinite;
     animation-delay: 2s;
 
     @keyframes dash {
@@ -35,7 +34,7 @@
     stroke-dasharray: 500;
     stroke-dashoffset: 1000;
     animation: dash 10s linear forwards;
-    animation-iteration-count: 3;
+    animation-iteration-count: infinite;
     animation-delay: 6s;
 
     @keyframes dash {

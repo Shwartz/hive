@@ -18,6 +18,10 @@
     font-size: clamp(1.75rem, 4vw + 2rem, 3.75rem);
   }
 
+  section {
+    margin-top: 4rem;
+  }
+
   .TextImage {
     display: flex;
     flex-direction: column;

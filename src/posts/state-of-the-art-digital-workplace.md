@@ -15,6 +15,8 @@ categories:
     import ComboRight from "../componets/templates/ComboRight.svelte";
     import TwoCols from "../componets/templates/TwoCols.svelte";
     import Divider from "../componets/templates/Divider.svelte";
+    import Numbers from "../componets/sections/Numbers.svelte";
+    import LikeWhatYouSee from "../componets/sections/LikeWhatYouSee.svelte";
 </script>
 
 <ComboRight>
@@ -65,6 +67,8 @@ categories:
 
 <Divider/>
 
+<Numbers/>
+
 <TwoCols direction="" title="Intelligent Search (img Left)">
 <div>
     <img src="{base}/images/image-44.jpg" alt="some alt"/>
@@ -83,8 +87,8 @@ categories:
 </div>
 </TwoCols>
 
-# h1 Title using markdown
-## h2 Title using markdown
-### h3 Title using markdown
+<Divider/>
 
-This is simple paragraph
+<LikeWhatYouSee/>
+
+

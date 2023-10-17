@@ -104,8 +104,13 @@ SITE UTILS
 @font-face {
     font-family: 'Segoe UI Normal';
     font-style: normal;
-    font-weight: 400;
     src: local(''), url('/fonts/segoe-ui-4-cufonfonts/Segoe UI.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Segoe UI Bold';
+    font-style: normal;
+    src: local(''), url('/fonts/segoe-ui-4-cufonfonts/Segoe UI Bold.ttf') format('truetype');
 }
 
 :root {
@@ -116,18 +121,15 @@ SITE UTILS
     font-family: var(--font-body);
     --cWhite: #fff;
     --cLightSection: #F5F7FA;
+    --cYellow: #FFB314;
     --cOrange: #FF5800;
     --cDarkOrange: #9e3800;
     --cCrimson: #CE0569;
     --cPrimary: #333;
     --cBlack: #1D1D1D;
     --bgGradient: linear-gradient(90deg, var(--cCrimson) 0%, var(--cOrange) 100%);
+    --bgGradient-1: linear-gradient(90deg, var(--cOrange) 0%, var(--cYellow) 100%);
     --focusShadow: 0 0 2px rgba(0,0,0,0.8);
-}
-@font-face {
-    font-family: 'Segoe UI Bold';
-    font-style: normal;
-    src: local(''), url('/fonts/segoe-ui-4-cufonfonts/Segoe UI Bold.ttf') format('truetype');
 }
 
 /** Font weight as 900 **/
@@ -216,7 +218,7 @@ section.dark {
 }
 
 p {
-    font-size: 1.2em;
+    font-size: 1rem;
 }
 
 a {
@@ -287,7 +289,6 @@ a:hover {
 
 .brandTitle {
     display: inline-block;
-    /*margin-top: 2rem;*/
     background: var(--bgGradient);
     background-size: cover;
     -webkit-background-clip: text;
